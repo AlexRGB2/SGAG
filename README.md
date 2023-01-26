@@ -1,4 +1,4 @@
-# Proyecto Integradora Gimnasio
+# Proyecto Integradora Gimnasio (SGAG)
 - Oscar Adahir Rojas
 - Victor Andrés Garay Montes
 - José Alexis Martínez Bárcenas

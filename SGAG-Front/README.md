@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # emporium
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
@@ -33,4 +32,3 @@ Integrantes:
 - Victor Andrés Garay Montes
 - José Alexis Martínez Bárcenas
 - Juan de Dios Ramirez Campos
->>>>>>> 0c94a6865c223ab58be9feb6891f670fc359b346

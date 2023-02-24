@@ -1,32 +1,28 @@
 export class User {
   id: number;
   username: string;
-  password: string;  
+  password: string;
   profile: UserProfile;
-  work: UserWork;
+  work: Roles;
   contacts: UserContacts;
   social: UserSocial;
   settings: UserSettings;
 }
 
-export class UserProfile {  
+export class UserProfile {
   name: string;
-  surname: string;  
+  surname: string;
   birthday: Object;
   gender: string;
   image: string;
 }
 
-export class UserWork {
-  company: string;
-  position: string;
-  salary: number;
+export class Roles {
+  rol: string;
 }
 
-export class UserContacts{
-  email: string;
+export class UserContacts {
   phone: string;
-  address: string;  
 }
 
 export class UserSocial {
@@ -35,7 +31,7 @@ export class UserSocial {
   google: string;
 }
 
-export class UserSettings{
+export class UserSettings {
   isActive: boolean;
   isDeleted: boolean;
   registrationDate: Date;

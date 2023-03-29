@@ -1,0 +1,20 @@
+#imgTablita {
+  width: 150px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+.dropdown-item{
+  cursor: pointer;
+}
+
+#imgModal {
+  width: 70%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+li :disabled{
+  color: black;
+  pointer-events: none;
+}

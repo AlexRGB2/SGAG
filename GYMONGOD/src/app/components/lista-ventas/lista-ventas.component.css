@@ -1,0 +1,4 @@
+li :disabled {
+  color: black;
+  pointer-events: none;
+}

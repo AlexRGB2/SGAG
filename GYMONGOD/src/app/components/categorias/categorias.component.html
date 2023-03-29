@@ -1,0 +1,94 @@
+<div class="container ">
+  <div class="input-group mb-2">
+    <!-- Barra de Busqueda -->
+    <input class="form-control rounded" id="tableSearch" type="text" placeholder="Buscar" [(ngModel)]="searchTerm"
+      (ngModelChange)="buscar(searchTerm)">
+    <button class="btn btn-primary ms-5 rounded" data-bs-toggle="modal" data-bs-target="#crear">
+      <i class='bx bxs-plus-circle bx-tada-hover'></i> Agregar Categoria</button>
+  </div>
+  <div class="row">
+    <div class="categorias col-sm-6 col-lg-3" *ngFor="let item of categorias; let i = index">
+      <div class="card bg-light text-dark">
+        <div class="card-body text-center">
+          {{item.nombre}}<br>
+          <button class="btn btn-link btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#actualizar"
+            (click)="mostrarDetalles(i)">
+            <span title="Editar">
+              <i class='bx bx-pencil' style="color: green;"></i>
+            </span>
+          </button>
+          <button class="btn btn-link btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#eliminar"
+            (click)="mostrarDetalles(i)">
+            <span title="Eliminar">
+              <i class='bx bx-trash' style="color: red;"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Agregar Categoria -->
+  <div class="modal fade" id="crear" tabindex="-1" aria-labelledby="crear" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="crear">Agregar Nueva Categoria</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <label class="form-label">Nombre</label>
+            <input type="text" placeholder="Nombre" class="form-control" [(ngModel)]="categoria.nombre"
+              [ngModelOptions]="{standalone: true}">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="saveCategoria(categoria)">Agregar</button>
+          <button type=" button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Actualizar Categoria -->
+  <div class="modal fade" id="actualizar" tabindex="-1" aria-labelledby="actualizar" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="actualizar">Actualizar Categoria</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Nombre: <input type="text" value="{{categoriaSeleccionadaModal.nombre}}" class="form-control"
+              [(ngModel)]="categoria.nombre" [ngModelOptions]="{standalone: true}"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" (click)="updateCategoria()" id="liveToastBtn"
+            data-bs-dismiss="modal">Actualizar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Eliminar Categoria -->
+  <div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="eliminar" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="eliminar">Eliminar Categoria</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>¿Estas Seguro de eliminar la siguiente categoría? <b class="fs-4">{{categoriaSeleccionadaModal.nombre}}</b>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger"
+            (click)="deleteCategoria(categoriaSeleccionadaModal.nombre)">Si</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>

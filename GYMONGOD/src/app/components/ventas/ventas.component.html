@@ -1,0 +1,119 @@
+<div class="container ">
+  <div class="input-group mb-2">
+    <!-- Barra de Busqueda -->
+    <button class="btn btn-primary ms-5 rounded" data-bs-toggle="modal" data-bs-target="#crear"><i
+        class='bx bxs-plus-circle bx-tada-hover'></i> Agregar Productos</button>
+    <select class="form-select ms-5 rounded" aria-label="Default select example" [(ngModel)]="tipoPago"
+      [ngModelOptions]="{standalone: true}">
+      <option selected>Tipo de Pago</option>
+      <option value="Efectivo">Efectivo</option>
+      <option value="Paypal">Paypal</option>
+    </select>
+    <div *ngIf="tipoPago != 'Paypal'; else paypal"><button class="btn btn-primary ms-5 rounded"
+        (click)="saveVentas()"><i class='bx bxs-plus-circle bx-tada-hover'></i>
+        Vender</button></div>
+  </div>
+  <!-- Tabla de Productos -->
+  <table class="table table-striped">
+    <thead id="tablaBg">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Código de Barras</th>
+        <th scope="col">Total</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody id="buscarTabla">
+      <tr *ngFor="let item of productos | slice:(currentPage-1)*pageSize:currentPage*pageSize; let i = index"
+        class="text-capitalize">
+        <td><img lazyLoad="{{item.img}}" id="imgTablita"></td>
+        <td>
+          <p>{{item.nombre}}</p>
+        </td>
+        <td>{{item.cantidad}}</td>
+        <td>{{item.codeBar}}</td>
+        <td>$ {{item.total}}</td>
+        <td>
+          <!-- Dropdown de opciones RUD -->
+          <div class="dropdown">
+            <a class="btn btn-outline-dark" id="opciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class='bx bx-dots-horizontal-rounded bx-sm'></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#Ver"
+                  (click)="mostrarDetalles(i)"><i class='bx bx-show'></i>
+                  Ver</button></li>
+              <li><button class="dropdown-item" (click)="removerProducto(i)"><i class='bx bxs-trash'></i>
+                  Eliminar</button></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><button class="page-link" [disabled]="currentPage == 1"
+          (click)="currentPage = currentPage - 1">Anterior</button></li>
+      <li class="page-item"><button class="page-link" [disabled]="currentPage * pageSize >= productos.length"
+          (click)="currentPage = currentPage + 1">Siguiente</button></li>
+
+    </ul>
+  </nav>
+</div>
+<!-- Modal para Agregar Producto -->
+<div class="modal fade" id="crear" tabindex="-1" aria-labelledby="crear" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="crear">Agregar Producto a la Venta</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <label class="form-label">Código de Barras</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" [(ngModel)]="codeBar"
+            [ngModelOptions]="{standalone: true}">
+          <label class="form-label">Cantidad</label>
+          <input type="number" placeholder="1" class="form-control" min="1" name="cantidadInput" [(ngModel)]="cantidad">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="agregarProducto(codeBar)" data-bs-dismiss="modal"
+          [disabled]="codeBar == ''">Agregar</button>
+        <button type=" button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Ver -->
+<div class="modal fade" id="Ver" tabindex="-1" aria-labelledby="Ver" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="Ver">{{productoSeleccionadoModal.nombre}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="{{productoSeleccionadoModal.img}}" class="img-fluid mx-auto d-block" id="imgModal">
+        <br>
+        <p>Cantidad: {{productoSeleccionadoModal.cantidad}}</p>
+        <p>Código de Barras: {{productoSeleccionadoModal.codeBar}}</p>
+        <p>Total: {{productoSeleccionadoModal.total}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #paypal>
+  <div class="ms-5 rounded">
+    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+  </div>
+</ng-template>

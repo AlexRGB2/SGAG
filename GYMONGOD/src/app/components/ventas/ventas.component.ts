@@ -1,3 +1,5 @@
+// Componente modificado por Juan de Dios Ramírez
+
 import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import {

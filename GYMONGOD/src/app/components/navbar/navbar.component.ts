@@ -1,3 +1,4 @@
+// Componente modificado por Alexis Martínez
 import { Component } from '@angular/core';
 
 @Component({

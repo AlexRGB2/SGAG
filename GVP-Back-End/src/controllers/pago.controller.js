@@ -1,3 +1,5 @@
+// Controlador generado por Victor Garay
+
 import pago from "../models/pago"
 import products from "../models/products";
 import corteDiario from "../models/corteDiario";

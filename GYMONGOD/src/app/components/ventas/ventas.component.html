@@ -1,6 +1,8 @@
+<!-- Componente modificado por Juan de Dios Ramírez-->
+
 <div class="container ">
   <div class="input-group mb-2">
-    <!-- Barra de Busqueda -->
+    <!-- Barra de opciones para venta -->
     <button class="btn btn-primary ms-5 rounded" data-bs-toggle="modal" data-bs-target="#crear"><i
         class='bx bxs-plus-circle bx-tada-hover'></i> Agregar Productos</button>
     <select class="form-select ms-5 rounded" aria-label="Default select example" [(ngModel)]="tipoPago"
@@ -13,7 +15,7 @@
         (click)="saveVentas()"><i class='bx bxs-plus-circle bx-tada-hover'></i>
         Vender</button></div>
   </div>
-  <!-- Tabla de Productos -->
+  <!-- Lista de ventas -->
   <table class="table table-striped">
     <thead id="tablaBg">
       <tr>

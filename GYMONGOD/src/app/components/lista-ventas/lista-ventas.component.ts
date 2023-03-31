@@ -1,3 +1,5 @@
+// Componente modificado por Alexis Martínez
+
 import { Component } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { Producto, Ventas } from 'src/app/models/producto';

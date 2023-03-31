@@ -1,3 +1,5 @@
+// Controlador generado por Victor Garay
+
 import products from "../models/products";
 
 export const getProducts = async (req, res) => {

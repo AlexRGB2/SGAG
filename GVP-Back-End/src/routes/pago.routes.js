@@ -1,3 +1,5 @@
+// Rutas generadas por Oscar Rojas
+
 import { Router } from "express";
 import { addCorteDiario, addPago, getPagos, removePago, getCorteDiario, getCorteMes, getCorteA, getCortes } from "../controllers/pago.controller";
 

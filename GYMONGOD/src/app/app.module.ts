@@ -12,7 +12,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { VentasComponent } from './components/ventas/ventas.component';
 import { ListaVentasComponent } from './components/lista-ventas/lista-ventas.component';
-import { CategoriasComponent } from './components/categorias/categorias.component';
 import { NgxPayPalModule } from 'ngx-paypal';
 import { CortesComponent } from './components/cortes/cortes.component';
 
@@ -23,7 +22,6 @@ import { CortesComponent } from './components/cortes/cortes.component';
     NavbarComponent,
     VentasComponent,
     ListaVentasComponent,
-    CategoriasComponent,
     CortesComponent,
   ],
   imports: [

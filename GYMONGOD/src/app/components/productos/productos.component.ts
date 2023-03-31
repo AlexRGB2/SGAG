@@ -1,3 +1,5 @@
+// Componente modificado por Víctor Garay 
+
 import { Component } from '@angular/core';
 import { Producto } from '../../models/producto';
 import { ProductosService } from 'src/app/services/productos.service';

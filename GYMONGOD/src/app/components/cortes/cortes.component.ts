@@ -1,3 +1,5 @@
+// Componente modificado por Oscar Rojas
+
 import { Component } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { Corte } from 'src/app/models/corteDiario';

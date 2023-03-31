@@ -1,3 +1,5 @@
+// Modelo generado por Alexis Matrínez
+
 import { Schema, model } from "mongoose";
 
 const productoSchema = new Schema({

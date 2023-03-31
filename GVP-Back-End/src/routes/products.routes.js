@@ -1,3 +1,5 @@
+// Rutas generadas por Oscar Rojas
+
 import { Router } from "express";
 import { addProduct, getProduct, getProducts, removeProduct, searchProductByName, updateProduct, searchProductByType } from "../controllers/products.controller";
 

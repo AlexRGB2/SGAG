@@ -1,16 +1,62 @@
-# Proyecto Integradora Gimnasio (SGAG - Sistema de Gestión Administrativa del Gimnasio)
+# Integradora II. SGAG (Sistema de Gestión Administrativa del Gimnasio)
 
-## Descripción
+## Contenido
+<details>
+  <summary>Tabla de contenido</summary>
+  <ol>
+    <li>
+      <a href="#acerca-del-proyecto">Acerca del Proyecto</a>
+      <ul>
+        <li><a href="#descripción">Descripción</a></li>
+        <li><a href="#objetivo">Objetivo</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#análisis-y-diseño-de-la-solución">Análisis y Diseño de la Solución</a>
+      <ul>
+        <li><a href="#historias-de-usuario">Historias de Usuario</a></li>
+        <li><a href="#diagrama-casos-de-uso">Diagrama de Casos de Uso</a></li>
+        <li><a href="#modelo-de-la-base-de-datos">Modelo de la Base de Datos</a></li>
+        <li><a href="#diagrama-de-actividades">Diagrama de Actividades</a></li>
+        <li><a href="#modelo-vista-controlador">Modelo Vista Controlador</a></li>
+        <li><a href="#diagrama-de-componentes">Diagrama de Componentes</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#implementación">Implementación</a>
+      <ul>
+        <li><a href="#estándares-de-base-de-datos">Estándares de Base de Datos</a></li>
+        <li><a href="#estándares-de-codificación">Estándares de Codificación</a></li>
+      </ul>
+    </li>      
+    <li><a href="#casos-de-prueba-y-su-ejecución">Casos de Prueba y su Ejecución</a></li>       
+    <li><a href="#guias">Guias</a></li>
+    <li><a href="#participantes">Participantes</a></li>
+  </ol>
+</details>
+
+<!-- Acerca del proyecto -->
+## Acerca del proyecto.
+
+<!-- Descripción -->
+#### Descripción.
+
 El dueño del gimnasio “Spartacus Fitness Center”, tiene la necesidad de implementar un sistema, el cual lo ayude a él y sus empleados a contar con una mejor y más eficaz administración del gimnasio. Ya que actualmente esta no se está llevando a cabo de manera adecuada, los principales problemas que se presentan en este caso, es que no tienen una buena administración de sus productos, esto incluye las entradas y salidas que tiene el gimnasio, los registros de entrada y salida por parte de los empleados no son óptimos, al igual que el catálogo físico de las maquinas no siempre es de gran ayuda. En cuanto a las clases de los clientes con el instructor, se necesita que tengan un mejor orden, ya sea se agreguen o se cancelen clases. En base a esta problemática se tomó la decisión de elaborar una aplicación web que ayude al personal del gimnasio con la administración de este. La mejora de los tiempos y la administración del gimnasio es una forma de medir el éxito que se espera tener al concluir con el desarrollo del proyecto.
 
 En nuestro caso, no se abarcará el proyecto en general, ya que este fue dividido en distintos módulos los cuales fueron asignados de manera igualitaria a cada equipo de desarrollo, por lo que a nosotros se nos solicitó la venta de productos, dicho módulo, como su nombre lo indica, se encargará de optimizar las ventas de productos de manera física dentro del gimnasio, además de que con ello se pretende llevar un mejor control del inventario de productos con cada venta registrada, es decir, después de cada venta, se actualizará el stock de cada producto vendido. También se implementará un apartado en el que se registrarán los cortes realizados diariamente, y estos podrán ser consultados mediante filtros.
 
-El principal objetivo que tiene la elaboración del  presente módulo es facilitar y agilizar el proceso de venta de productos a los empleados del gimnasio, con ello se refiere a que el proceso tradicional de vender productos para posteriormente registrar las ventas en un papel y actualizar el stock de los productos vendidos quedará atrás por ser algo bastante tardado y tedioso, se pretende automatizar este proceso para tener una venta de productos mucho más eficiente, es decir, después de cada venta, de manera automática se actualizará el stock de cada producto, además de que estas ventas podrán ser consultadas y se realizarán cortes diarios con el objetivo de que el administrador o empleados puedan visualizar cuánto es que se está vendiendo diariamente. También se busca implementar el pago mediante tarjeta para que el cliente en caso de no contar con efectivo pueda hacer su compra mediante este método y de igual manera mejorar la satisfacción del cliente con el servicio brindado.
+De acuerdo a la complejidad del módulo solicitado, se considera que el tiempo (7 semanas) otorgado para la elaboración de este módulo desde cero y posteriormente pasar por las pruebas necesarias y en base a ello, realizar las correcciones de errores identificados, es más que suficiente para entregar un producto bien elaborado el cual cumpla con los requerimientos del cliente. Además es importante mencionar que dicho proyecto módulo tendrá un costo estimado de 12,000 pesos mexicanos.
 
-De acuerdo a la complejidad del módulo solicitado, se considera que el tiempo (7 semanas) otorgado para la elaboración de este módulo desde cero y posteriormente pasar por las pruebas necesarias y en base a ello, realizar las correcciones de errores identificados, es más que suficiente para entregar un producto bien elaborado el cual cumpla con los requerimientos del cliente.
+<!-- Objetivo -->
+#### Objetivo.
 
-## Lista de requisitos de proyecto refinada
-### Historias de usuario
+El principal objetivo que tiene la elaboración del presente módulo es facilitar y agilizar el proceso de venta de productos a los empleados del gimnasio, con ello se refiere a que el proceso tradicional de vender productos para posteriormente registrar las ventas en un papel y actualizar el stock de los productos vendidos quedará atrás por ser algo bastante tardado y tedioso, se pretende automatizar este proceso para tener una venta de productos mucho más eficiente, es decir, después de cada venta, de manera automática se actualizará el stock de cada producto, además de que estas ventas podrán ser consultadas y se realizarán cortes diarios con el objetivo de que el administrador o empleados puedan visualizar cuánto es que se está vendiendo diariamente. También se busca implementar el pago mediante tarjeta para que el cliente en caso de no contar con efectivo pueda hacer su compra mediante este método y de igual manera mejorar la satisfacción del cliente con el servicio brindado.
+
+<!-- Análisis del proyecto -->
+## Análisis y Diseño de la Solución.
+
+<!-- Historias de Usuario -->
+#### Historias de Usuario.
 | Id | Como | Quiero | Para |
 |----|----------|---------|------|
 | 01 |Administrador|Que se actualicen los productos en el inventario después de cada venta|Tener un mejor manejo del stock de productos|
@@ -18,17 +64,13 @@ De acuerdo a la complejidad del módulo solicitado, se considera que el tiempo (
 | 03 |Administrador|Ver las ventas de productos realizadas|Verificar qué ventas se han realizado y confirmar qué productos se han vendido|
 | 04 |Cliente|Realizar pagos de productos mediante tarjeta|Comprar productos en caso de que no traiga efectivo|
 
-### Diagrama de casos de uso
+<!-- Diagrama de Casos de Uso -->
+#### Diagrama Casos de Uso.
 ![Diagrama de casos de uso](https://user-images.githubusercontent.com/70409607/228640928-112fc0da-6177-4f82-b1cc-4f38420bee78.jpg)
 
-### Diagrama de actividades
-![Venta de productos](https://user-images.githubusercontent.com/70409607/228642288-cf457936-d1ff-4e6f-a19e-81920824825b.png)
+<!-- Modelo de la Base de Datos -->
+#### Modelo de la Base de Datos.
 
-![Ver ventas](https://user-images.githubusercontent.com/70409607/228642286-0ef6f920-90f3-40c3-9d8c-ce54984cd3a3.jpg)
-
-![Ver ingresos png](https://user-images.githubusercontent.com/70409607/228642290-b7045b87-6af9-40fe-b830-346f11ec16e7.jpg)
-
-## Modelo de la base de datos
 La base de datos a utilizar será una no relacional, en la que se utilizará como gestor de base de datos MongoDB Atlas. Dicho modelo queda de la siguiente manera.
 
 ![image](https://user-images.githubusercontent.com/70409607/228937255-ac448130-c835-4a51-be09-2caf705bc41a.png)
@@ -43,7 +85,27 @@ La colección "venta" almacena información de cada transacción de venta, inclu
 
 La colección "corteDiario" almacena información del corte diario de caja, incluyendo el total de ventas en efectivo, tarjeta y el total de la venta del día. Esto permite hacer un seguimiento de las ventas totales y facilita la contabilidad del gimnasio.
 
-### Estándar de la base de datos
+<!-- Diagrama de Actividades -->
+#### Diagrama de Actividades.
+![Venta de productos](https://user-images.githubusercontent.com/70409607/228642288-cf457936-d1ff-4e6f-a19e-81920824825b.png)
+
+![Ver ventas](https://user-images.githubusercontent.com/70409607/228642286-0ef6f920-90f3-40c3-9d8c-ce54984cd3a3.jpg)
+
+![Ver ingresos png](https://user-images.githubusercontent.com/70409607/228642290-b7045b87-6af9-40fe-b830-346f11ec16e7.jpg)
+
+<!-- Modelo Vista Controlador -->
+#### Modelo Vista Controlador.
+![image](https://user-images.githubusercontent.com/70409607/228961106-3f5f4263-65f5-4fad-a4cd-d8beb0c304bd.png)
+
+<!-- Diagrama de Componentes -->
+#### Diagrama de Componentes.
+![Diagrama de comp](https://user-images.githubusercontent.com/70409607/229139629-2d9692b8-80b7-45d6-9a60-fa4598449f93.jpg)
+
+<!-- Implementación del proyecto -->
+## Implementación.
+
+<!-- Estándares de Base de Datos -->
+#### Estándares de Base de Datos.
 La base de datos propuesta tiene tres colecciones: "producto", "pago" y "corteDiario". Cada colección contiene campos específicos que almacenan información detallada sobre los productos, las ventas y los cortes diarios de caja. A continuación se detallan los campos de cada colección:
 
 1.- Colección "producto":
@@ -71,7 +133,8 @@ La base de datos propuesta tiene tres colecciones: "producto", "pago" y "corteDi
 
 Este estándar de la base de datos proporciona una estructura clara y detallada para almacenar información sobre los productos, las ventas y los cortes diarios de caja en una tienda o negocio. Cada colección tiene campos específicos que facilitan la consulta y el análisis de la información, lo que permite una gestión más eficiente y efectiva de la operación del negocio.
 
-### Estándar de programación
+<!-- Estándares de Codificación -->
+#### Estándares de Codificación.
 A continuación, se presenta un posible estándar de programación para el desarrollo de aplicaciones web utilizando el stack MEAN (MongoDB, Express.js, Angular y Node.js):
 
 1.- Convenciones de nomenclatura:
@@ -101,9 +164,33 @@ A continuación, se presenta un posible estándar de programación para el desar
 
 Siguiendo este estándar de programación, se puede desarrollar aplicaciones web robustas, escalables y seguras utilizando el stack MEAN.
 
-## Modelo Vista Controlador (MVC)
-![image](https://user-images.githubusercontent.com/70409607/228961106-3f5f4263-65f5-4fad-a4cd-d8beb0c304bd.png)
+<!-- Casos de prueba -->
+#### Casos de Prueba y su Ejecución.
+[Casos de Prueba SGAG.pdf](https://github.com/AlexRGB2/SGAG/files/11187382/Casos.de.Prueba.SGAG.pdf)
 
-## Diagrama de componentes
-![Diagrama de comp](https://user-images.githubusercontent.com/70409607/229139629-2d9692b8-80b7-45d6-9a60-fa4598449f93.jpg)
+<!-- Requisitos -->
+### Requisitos
+Requisitos de Instalación.
+
+<!-- Instalación -->
+### Instalacion
+Instalación del Software
+
+
+## Guias
+Guias de Uso.
+
+## contribucion
+Contribucion.
+
+## Licencia
+Licencia.
+
+## Contacto
+Contacto.
+
+## Participantes
+* [participante 1]()
+* [participante 2]()
+* [participante 3]()
 

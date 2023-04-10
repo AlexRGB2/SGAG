@@ -202,14 +202,14 @@ Para probar el correcto funcionamiento del módulo y asegurarnos de que el produ
 ### Requisitos.
 Para instalar el proyecto en un entorno de desarrollo y posteriormente hacer uso de este, es necesario contar con los siguientes requisitos instalados en el ordenador:
 
-* Node.js: Instala la última versión estable de Node.js. Puedes descargarla desde su sitio web oficial: https://nodejs.org/es/
-* Angular CLI: Angular CLI es una herramienta de línea de comandos que facilita la creación y gestión de proyectos de Angular. Para instalarlo, abre una terminal o consola y ejecuta el siguiente comando:
+* **Node.js:** Instala la última versión estable de Node.js. Puedes descargarla desde su sitio web oficial: https://nodejs.org/es/
+* **Angular CLI:** Angular CLI es una herramienta de línea de comandos que facilita la creación y gestión de proyectos de Angular. Para instalarlo, abre una terminal o consola y ejecuta el siguiente comando:
 
 <p align="center">
-  npm install -g @angular/cli
+  <em>npm install -g @angular/cli</em>
 </p>
 
-* Editor de código: Puedes utilizar cualquier editor de código para desarrollar tu proyecto de Angular. Algunas opciones populares son Visual Studio Code, Sublime Text, Atom, entre otros.
+* **Editor de código:** Puedes utilizar cualquier editor de código para desarrollar tu proyecto de Angular. Algunas opciones populares son Visual Studio Code, Sublime Text, Atom, entre otros.
 
 <!-- Instalación -->
 ### Instalación.

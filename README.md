@@ -30,7 +30,14 @@
       </ul>
     </li>      
     <li><a href="#casos-de-prueba-y-su-ejecución">Casos de Prueba y su Ejecución</a></li>       
-    <li><a href="#guias">Guias</a></li>
+    <li>
+      <a href="#guias">Guias</a>
+      <ul>
+        <li><a href="#requisitos">Requisitos</a></li>
+        <li><a href="#instalación">Instalación</a></li>
+        <li><a href="#uso">Uso</a></li>
+      </ul>
+    </li>
     <li><a href="#participantes">Participantes</a></li>
   </ol>
 </details>
@@ -39,7 +46,7 @@
 ## Acerca del proyecto.
 
 <!-- Descripción -->
-#### Descripción.
+### Descripción.
 
 El dueño del gimnasio “Spartacus Fitness Center”, tiene la necesidad de implementar un sistema, el cual lo ayude a él y sus empleados a contar con una mejor y más eficaz administración del gimnasio. Ya que actualmente esta no se está llevando a cabo de manera adecuada, los principales problemas que se presentan en este caso, es que no tienen una buena administración de sus productos, esto incluye las entradas y salidas que tiene el gimnasio, los registros de entrada y salida por parte de los empleados no son óptimos, al igual que el catálogo físico de las maquinas no siempre es de gran ayuda. En cuanto a las clases de los clientes con el instructor, se necesita que tengan un mejor orden, ya sea se agreguen o se cancelen clases. En base a esta problemática se tomó la decisión de elaborar una aplicación web que ayude al personal del gimnasio con la administración de este. La mejora de los tiempos y la administración del gimnasio es una forma de medir el éxito que se espera tener al concluir con el desarrollo del proyecto.
 
@@ -48,7 +55,7 @@ En nuestro caso, no se abarcará el proyecto en general, ya que este fue dividid
 De acuerdo a la complejidad del módulo solicitado, se considera que el tiempo (7 semanas) otorgado para la elaboración de este módulo desde cero y posteriormente pasar por las pruebas necesarias y en base a ello, realizar las correcciones de errores identificados, es más que suficiente para entregar un producto bien elaborado el cual cumpla con los requerimientos del cliente. Además es importante mencionar que dicho proyecto módulo tendrá un costo estimado de 12,000 pesos mexicanos.
 
 <!-- Objetivo -->
-#### Objetivo.
+### Objetivo.
 
 El principal objetivo que tiene la elaboración del presente módulo es facilitar y agilizar el proceso de venta de productos a los empleados del gimnasio, con ello se refiere a que el proceso tradicional de vender productos para posteriormente registrar las ventas en un papel y actualizar el stock de los productos vendidos quedará atrás por ser algo bastante tardado y tedioso, se pretende automatizar este proceso para tener una venta de productos mucho más eficiente, es decir, después de cada venta, de manera automática se actualizará el stock de cada producto, además de que estas ventas podrán ser consultadas y se realizarán cortes diarios con el objetivo de que el administrador o empleados puedan visualizar cuánto es que se está vendiendo diariamente. También se busca implementar el pago mediante tarjeta para que el cliente en caso de no contar con efectivo pueda hacer su compra mediante este método y de igual manera mejorar la satisfacción del cliente con el servicio brindado.
 
@@ -56,7 +63,7 @@ El principal objetivo que tiene la elaboración del presente módulo es facilita
 ## Análisis y Diseño de la Solución.
 
 <!-- Historias de Usuario -->
-#### Historias de Usuario.
+### Historias de Usuario.
 | Id | Como | Quiero | Para |
 |----|----------|---------|------|
 | 01 |Administrador|Que se actualicen los productos en el inventario después de cada venta|Tener un mejor manejo del stock de productos|
@@ -65,11 +72,11 @@ El principal objetivo que tiene la elaboración del presente módulo es facilita
 | 04 |Cliente|Realizar pagos de productos mediante tarjeta|Comprar productos en caso de que no traiga efectivo|
 
 <!-- Diagrama de Casos de Uso -->
-#### Diagrama Casos de Uso.
+### Diagrama Casos de Uso.
 ![Diagrama de casos de uso](https://user-images.githubusercontent.com/70409607/228640928-112fc0da-6177-4f82-b1cc-4f38420bee78.jpg)
 
 <!-- Modelo de la Base de Datos -->
-#### Modelo de la Base de Datos.
+### Modelo de la Base de Datos.
 
 La base de datos a utilizar será una no relacional, en la que se utilizará como gestor de base de datos MongoDB Atlas. Dicho modelo queda de la siguiente manera.
 
@@ -86,7 +93,7 @@ La colección "venta" almacena información de cada transacción de venta, inclu
 La colección "corteDiario" almacena información del corte diario de caja, incluyendo el total de ventas en efectivo, tarjeta y el total de la venta del día. Esto permite hacer un seguimiento de las ventas totales y facilita la contabilidad del gimnasio.
 
 <!-- Diagrama de Actividades -->
-#### Diagrama de Actividades.
+### Diagrama de Actividades.
 ![Venta de productos](https://user-images.githubusercontent.com/70409607/228642288-cf457936-d1ff-4e6f-a19e-81920824825b.png)
 
 ![Ver ventas](https://user-images.githubusercontent.com/70409607/228642286-0ef6f920-90f3-40c3-9d8c-ce54984cd3a3.jpg)
@@ -94,18 +101,18 @@ La colección "corteDiario" almacena información del corte diario de caja, incl
 ![Ver ingresos png](https://user-images.githubusercontent.com/70409607/228642290-b7045b87-6af9-40fe-b830-346f11ec16e7.jpg)
 
 <!-- Modelo Vista Controlador -->
-#### Modelo Vista Controlador.
+### Modelo Vista Controlador.
 ![image](https://user-images.githubusercontent.com/70409607/228961106-3f5f4263-65f5-4fad-a4cd-d8beb0c304bd.png)
 
 <!-- Diagrama de Componentes -->
-#### Diagrama de Componentes.
+### Diagrama de Componentes.
 ![Diagrama de comp](https://user-images.githubusercontent.com/70409607/229139629-2d9692b8-80b7-45d6-9a60-fa4598449f93.jpg)
 
 <!-- Implementación del proyecto -->
 ## Implementación.
 
 <!-- Estándares de Base de Datos -->
-#### Estándares de Base de Datos.
+### Estándares de Base de Datos.
 La base de datos propuesta tiene tres colecciones: "producto", "pago" y "corteDiario". Cada colección contiene campos específicos que almacenan información detallada sobre los productos, las ventas y los cortes diarios de caja. A continuación se detallan los campos de cada colección:
 
 1.- Colección "producto":
@@ -134,7 +141,7 @@ La base de datos propuesta tiene tres colecciones: "producto", "pago" y "corteDi
 Este estándar de la base de datos proporciona una estructura clara y detallada para almacenar información sobre los productos, las ventas y los cortes diarios de caja en una tienda o negocio. Cada colección tiene campos específicos que facilitan la consulta y el análisis de la información, lo que permite una gestión más eficiente y efectiva de la operación del negocio.
 
 <!-- Estándares de Codificación -->
-#### Estándares de Codificación.
+### Estándares de Codificación.
 A continuación, se presenta un posible estándar de programación para el desarrollo de aplicaciones web utilizando el stack MEAN (MongoDB, Express.js, Angular y Node.js):
 
 1.- Convenciones de nomenclatura:
@@ -165,32 +172,40 @@ A continuación, se presenta un posible estándar de programación para el desar
 Siguiendo este estándar de programación, se puede desarrollar aplicaciones web robustas, escalables y seguras utilizando el stack MEAN.
 
 <!-- Casos de prueba -->
-#### Casos de Prueba y su Ejecución.
+## Casos de Prueba y su Ejecución.
+Para probar el correcto funcionamiento del módulo y asegurarnos de que el producto entregado al cliente no cuente con ninguna falla se relaizaron algunos casos de prueba los cuales se presentan a continuación además de su respectivo resultado obtenido.
+
 [Casos de Prueba SGAG.pdf](https://github.com/AlexRGB2/SGAG/files/11187382/Casos.de.Prueba.SGAG.pdf)
 
+<!-- guías para funcionamiento del sistema -->
+## Guias.
+
 <!-- Requisitos -->
-### Requisitos
-Requisitos de Instalación.
+### Requisitos.
+Para instalar el proyecto en un entorno de desarrollo y posteriormente hacer uso de este, es necesario contar con los siguientes requisitos instalados en el ordenador:
+
+* Node.js: Instala la última versión estable de Node.js. Puedes descargarla desde su sitio web oficial: https://nodejs.org/es/
+* Angular CLI: Angular CLI es una herramienta de línea de comandos que facilita la creación y gestión de proyectos de Angular. Para instalarlo, abre una terminal o consola y ejecuta el siguiente comando:
+
+```npm install -g @angular/cli```
+
+* Editor de código: Puedes utilizar cualquier editor de código para desarrollar tu proyecto de Angular. Algunas opciones populares son Visual Studio Code, Sublime Text, Atom, entre otros.
 
 <!-- Instalación -->
-### Instalacion
-Instalación del Software
+### Instalación.
+Para realizar la instalación del sistema en un entorno de desarrollo se pueden seguir los pasos descritos en el siguiente manual:
+
+[Proceso de instalación de la aplicación.pdf](https://github.com/AlexRGB2/SGAG/files/11187498/Proceso.de.instalacion.de.la.aplicacion.pdf)
 
 
-## Guias
-Guias de Uso.
+<!-- Instalación -->
+### Uso.
+Para comprender el uso del proyecto, de igual manera se dejará un manual con el objetivo de que el cliente comprenda perfectamente cómo es que este funciona.
 
-## contribucion
-Contribucion.
+[Manual de usuario.pdf](https://github.com/AlexRGB2/SGAG/files/11187503/Manual.de.usuario.pdf)
 
-## Licencia
-Licencia.
-
-## Contacto
-Contacto.
-
-## Participantes
-* [participante 1]()
-* [participante 2]()
-* [participante 3]()
-
+## Participantes.
+* Garay Montes Víctor Andrés.
+* Martínez Bárcenas José Alexis.
+* Ramírez Campos Juan de Dios.
+* Rojas Sánchez Oscar Adahir.

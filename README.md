@@ -73,40 +73,58 @@ El principal objetivo que tiene la elaboración del presente módulo es facilita
 
 <!-- Diagrama de Casos de Uso -->
 ### Diagrama Casos de Uso.
-![Diagrama de casos de uso](https://user-images.githubusercontent.com/70409607/228640928-112fc0da-6177-4f82-b1cc-4f38420bee78.jpg)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/228640928-112fc0da-6177-4f82-b1cc-4f38420bee78.jpg">
+</p>
 
 <!-- Modelo de la Base de Datos -->
 ### Modelo de la Base de Datos.
 
 La base de datos a utilizar será una no relacional, en la que se utilizará como gestor de base de datos MongoDB Atlas. Dicho modelo queda de la siguiente manera.
 
-![image](https://user-images.githubusercontent.com/70409607/228937255-ac448130-c835-4a51-be09-2caf705bc41a.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/228937255-ac448130-c835-4a51-be09-2caf705bc41a.png">
+</p>
 
 La colección "producto" almacena información de los productos disponibles en el inventario, como el nombre, precio, categoría, stock, código de barras y una imagen representativa. Esto permite realizar búsquedas de forma eficiente al momento de realzar ventas.
 
-![image](https://user-images.githubusercontent.com/70409607/228940450-bb9c6008-acce-43e7-815f-98b7c9664eff.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/228940450-bb9c6008-acce-43e7-815f-98b7c9664eff.png">
+</p>
 
 La colección "venta" almacena información de cada transacción de venta, incluyendo los productos adquiridos, el tipo de pago (efectivo, tarjeta, etc.), la fecha y el total de la venta. Esto permite llevar un registro detallado de las ventas realizadas y analizar el comportamiento de los clientes.
 
-![image](https://user-images.githubusercontent.com/70409607/228940646-1833a8ab-dece-43b5-90ce-ce60f44bbeea.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/228940646-1833a8ab-dece-43b5-90ce-ce60f44bbeea.png">
+</p>
 
 La colección "corteDiario" almacena información del corte diario de caja, incluyendo el total de ventas en efectivo, tarjeta y el total de la venta del día. Esto permite hacer un seguimiento de las ventas totales y facilita la contabilidad del gimnasio.
 
 <!-- Diagrama de Actividades -->
 ### Diagrama de Actividades.
-![Venta de productos](https://user-images.githubusercontent.com/70409607/228642288-cf457936-d1ff-4e6f-a19e-81920824825b.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/228642288-cf457936-d1ff-4e6f-a19e-81920824825b.png">
+</p>
 
-![Ver ventas](https://user-images.githubusercontent.com/70409607/228642286-0ef6f920-90f3-40c3-9d8c-ce54984cd3a3.jpg)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/228642286-0ef6f920-90f3-40c3-9d8c-ce54984cd3a3.jpg">
+</p>
 
-![Ver ingresos png](https://user-images.githubusercontent.com/70409607/228642290-b7045b87-6af9-40fe-b830-346f11ec16e7.jpg)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/228642290-b7045b87-6af9-40fe-b830-346f11ec16e7.jpg">
+</p>
 
 <!-- Modelo Vista Controlador -->
 ### Modelo Vista Controlador.
-![image](https://user-images.githubusercontent.com/70409607/228961106-3f5f4263-65f5-4fad-a4cd-d8beb0c304bd.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/228961106-3f5f4263-65f5-4fad-a4cd-d8beb0c304bd.png">
+</p>
 
 <!-- Diagrama de Componentes -->
 ### Diagrama de Componentes.
-![Diagrama de comp](https://user-images.githubusercontent.com/70409607/229139629-2d9692b8-80b7-45d6-9a60-fa4598449f93.jpg)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/229139629-2d9692b8-80b7-45d6-9a60-fa4598449f93.jpg">
+</p>
 
 <!-- Implementación del proyecto -->
 ## Implementación.
@@ -187,7 +205,9 @@ Para instalar el proyecto en un entorno de desarrollo y posteriormente hacer uso
 * Node.js: Instala la última versión estable de Node.js. Puedes descargarla desde su sitio web oficial: https://nodejs.org/es/
 * Angular CLI: Angular CLI es una herramienta de línea de comandos que facilita la creación y gestión de proyectos de Angular. Para instalarlo, abre una terminal o consola y ejecuta el siguiente comando:
 
-```npm install -g @angular/cli```
+<p align="center">
+  npm install -g @angular/cli
+</p>
 
 * Editor de código: Puedes utilizar cualquier editor de código para desarrollar tu proyecto de Angular. Algunas opciones populares son Visual Studio Code, Sublime Text, Atom, entre otros.
 

@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div id="barra" class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/img/logo.jfif" alt="Bootstrap" width="50" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <!--<li class="nav-item">
+          <a *ngIf="isLogged" class="nav-link" routerLink="/cliente/lista" >Clientes</a>
+        </li>-->
+        <li class="nav-item">
+          <a *ngIf="isLogged" onmouseover="this.style.color='#DC0000'" onmouseout="this.style.color='white'"
+            class="nav-link" routerLink="/proveedor/lista">Proveedores</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="isLogged" onmouseover="this.style.color='#DC0000'" onmouseout="this.style.color='white'"
+            class="nav-link" routerLink="/producto/lista">Inventario</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="isLogged" onmouseover="this.style.color='#DC0000'" onmouseout="this.style.color='white'"
+            class="nav-link" routerLink="empelado/lista">Empleados</a>
+        </li>
+        <li *ngIf="isLogged" class="nav-item">
+          <a class="nav-link" onmouseover="this.style.color='#DC0000'" onmouseout="this.style.color='white'"
+            routerLink="/chekcIn">CheckIn</a>
+        </li>
+        <li *ngIf="isLogged && isAdmin" class="nav-item">
+          <a class="nav-link" onmouseover="this.style.color='#DC0000'" onmouseout="this.style.color='white'"
+            routerLink="/control-checkIn">ControlCheckIn</a>
+        </li>
+        <li *ngIf="isLogged && isAdmin" class="nav-item">
+          <a class="nav-link" onmouseover="this.style.color='#DC0000'" onmouseout="this.style.color='white'"
+            routerLink="/nuevaVenta">Venta</a>
+        </li>
+        <!--
+        <li class="nav-item dropdown" style="margin-left: 900px;">
+          <a *ngIf="isLogged" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Usuario: {{userName}}
+          </a>
+          <ul class="dropdown-menu">
+            <a *ngIf="isLogged" class="nav-link" onmouseover="this.style.color='#DC0000'" onmouseout="this.style.color='black'" (click)="logOut()">LogOut</a>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a *ngIf="isLogged" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Empleados
+          </a>
+          <ul class="dropdown-menu">
+            <li><a *ngIf="isLogged" class="dropdown-item" href="#">Admin</a></li>
+            <li><a *ngIf="isLogged" class="dropdown-item" href="#">Instructor</a></li>
+            <li><a *ngIf="isLogged" class="dropdown-item" href="#">Mantenimiento</a></li>
+          </ul>
+        </li>
+              -->
+
+        <li class="nav-item">
+          <a *ngIf="!isLogged" class="nav-link" onmouseover="this.style.color='#DC0000'"
+            onmouseout="this.style.color='white'" routerLink="/login">Login</a>
+        </li>
+        <span id="user" *ngIf="isLogged" class="navbar-text" style="margin-left: 200px; margin-right: 15px;">
+          Usuario: {{userName}}
+        </span>
+        <li class="nav-item">
+          <a *ngIf="isLogged" class="nav-link" onmouseover="this.style.color='#DC0000'"
+            onmouseout="this.style.color='white'" (click)="logOut()">LogOut</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

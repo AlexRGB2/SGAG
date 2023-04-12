@@ -215,14 +215,14 @@ Para instalar el proyecto en un entorno de desarrollo y posteriormente hacer uso
 ### Instalación.
 Para realizar la instalación del sistema en un entorno de desarrollo se pueden seguir los pasos descritos en el siguiente manual:
 
-[Proceso de instalación de la aplicación.pdf](https://github.com/AlexRGB2/SGAG/files/11187498/Proceso.de.instalacion.de.la.aplicacion.pdf)
+[Proceso de instalación de la aplicación](https://drive.google.com/file/d/1HJRDSSOJ2yVTRsRkUHIEDXnO0PHFm_X2/view?usp=share_link)
 
 
 <!-- Instalación -->
 ### Uso.
 Para comprender el uso del proyecto, de igual manera se dejará un manual con el objetivo de que el cliente comprenda perfectamente cómo es que este funciona.
 
-[Manual de usuario.pdf](https://github.com/AlexRGB2/SGAG/files/11187503/Manual.de.usuario.pdf)
+[Manual de usuario](https://drive.google.com/file/d/10w1T-rVB8mD64FLrF_iim0tTW2T-_WSz/view?usp=share_link)
 
 ## Participantes.
 * Garay Montes Víctor Andrés.

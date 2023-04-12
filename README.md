@@ -228,4 +228,4 @@ Para comprender el uso del proyecto, de igual manera se dejará un manual con el
 * [Garay Montes Víctor Andrés]()
 * [Martínez Bárcenas José Alexis](https://github.com/AlexRGB2)
 * [Ramírez Campos Juan de Dios]()
-* [Rojas Sánchez Oscar Adahir]()
+* [Rojas Sánchez Oscar Adahir](https://github.com/cr7kawai)

@@ -191,9 +191,9 @@ Siguiendo este estándar de programación, se puede desarrollar aplicaciones web
 
 <!-- Casos de prueba -->
 ## Casos de Prueba y su Ejecución.
-Para probar el correcto funcionamiento del módulo y asegurarnos de que el producto entregado al cliente no cuente con ninguna falla se relaizaron algunos casos de prueba los cuales se presentan a continuación además de su respectivo resultado obtenido.
+Para probar el correcto funcionamiento del módulo y asegurarnos de que el producto entregado al cliente no cuente con ninguna falla se realizaron algunos casos de prueba los cuales se presentan a continuación además de su respectivo resultado obtenido.
 
-[Casos de Prueba SGAG.pdf](https://github.com/AlexRGB2/SGAG/files/11187382/Casos.de.Prueba.SGAG.pdf)
+<a href="https://docs.google.com/spreadsheets/d/1U6m8PuUUGnx6aFcqUrcu-ghJ7VgSTqte/edit?usp=share_link&ouid=116646991518427796990&rtpof=true&sd=true">Casos de prueba módulo de ventas</a>
 
 <!-- guías para funcionamiento del sistema -->
 ## Guias.

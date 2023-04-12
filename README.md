@@ -225,7 +225,7 @@ Para comprender el uso del proyecto, de igual manera se dejará un manual con el
 [Manual de usuario](https://drive.google.com/file/d/10w1T-rVB8mD64FLrF_iim0tTW2T-_WSz/view?usp=share_link)
 
 ## Participantes.
-* [Garay Montes Víctor Andrés]()
+* [Garay Montes Víctor Andrés](https://github.com/victorsigma)
 * [Martínez Bárcenas José Alexis](https://github.com/AlexRGB2)
-* [Ramírez Campos Juan de Dios]()
+* [Ramírez Campos Juan de Dios](https://github.com/JuanDeDiosRamirezCampos)
 * [Rojas Sánchez Oscar Adahir](https://github.com/cr7kawai)

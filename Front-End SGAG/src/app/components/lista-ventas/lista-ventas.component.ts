@@ -32,14 +32,18 @@ export class ListaVentasComponent implements OnInit {
 
   async getVentas() {
     this.ventaService.getVentas().subscribe(
+      // Callback en caso de éxito de la petición
       (resp) => {
+        // Asigna la respuesta de la petición a la variable 'ventas'
         this.ventas = resp;
       },
+      // Callback en caso de error de la petición, muestra el error en la consola
       (err) => console.error(err)
     );
   }
 
   async mostrarDetalles(index: number) {
+    // Asigna el elemento de ventas en la posición 'index' a la variable 'ventaSeleccionadaModal'
     this.ventaSeleccionadaModal = this.ventas[index];
   }
 

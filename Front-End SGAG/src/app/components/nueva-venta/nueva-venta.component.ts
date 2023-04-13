@@ -99,8 +99,6 @@ export class NuevaVentaComponent implements OnInit {
     this.productos.splice(index, 1);
   }
 
-  cambiarPagina() {}
-
   /**
    * Agrega un producto a dos arreglos diferentes en base a la cantidad y disponibilidad del producto.
    * @param producto - El código de barras o identificador del producto a ser agregado.
@@ -154,6 +152,7 @@ export class NuevaVentaComponent implements OnInit {
               this.codeBar = '';
               this.cantidad = 1;
             } else {
+              // Actualizar la cantidad y total del producto y venta si el producto ya existe en el arreglo
               const product: any = this.productos.find(
                 (item: ProductoVentaData) => {
                   return item.nombre == data.nombreProducto;
@@ -174,12 +173,14 @@ export class NuevaVentaComponent implements OnInit {
               this.cantidad = 1;
             }
           } else {
+            // Mostrar mensaje de error si no hay suficiente inventario
             this.toast.error('No inventory', 'Error', { timeOut: 3000 });
             this.codeBar = '';
             this.cantidad = 1;
           }
         });
     } else {
+      // Mostrar mensaje de error si la cantidad no es válida
       this.toast.error('Insert a Valid Number', 'Error', { timeOut: 3000 });
       this.codeBar = '';
       this.cantidad = 1;
@@ -192,16 +193,16 @@ export class NuevaVentaComponent implements OnInit {
     currency: 'MXN',
     createOrderOnClient: (data) =>
       <ICreateOrderRequest>{
-        intent: 'CAPTURE',
+        intent: 'CAPTURE', // Establece la intención de la orden como 'CAPTURE', lo que significa que el pago será capturado inmediatamente
         purchase_units: [
           {
             amount: {
               currency_code: 'MXN',
-              value: this.getTotal().toString(),
+              value: this.getTotal().toString(), // Establece el valor total de la orden
               breakdown: {
                 item_total: {
                   currency_code: 'MXN',
-                  value: this.getTotal().toString(),
+                  value: this.getTotal().toString(), // Establece el valor total de los items de la orden
                 },
               },
             },
@@ -220,14 +221,15 @@ export class NuevaVentaComponent implements OnInit {
         ],
       },
     advanced: {
-      commit: 'true',
+      commit: 'true', // Habilita la opción de captura automática del pago
     },
     style: {
-      label: 'pay',
-      layout: 'vertical',
+      label: 'pay', // Establece el texto del botón de pago
+      layout: 'vertical', // Establece el diseño del botón de pago
     },
     onApprove: (data, actions) => {
-      // Realiza la captura del pago
+      // Función que se ejecutará cuando el usuario apruebe el pago
+      // Realiza la captura del pago y ejecuta otras acciones, como guardar ventas y recargar la página
       return actions.order.capture().then((details: any) => {
         this.saveVentas();
         this.ventaService.postCorteDiario().subscribe((resp) => {
@@ -236,27 +238,32 @@ export class NuevaVentaComponent implements OnInit {
       });
     },
     onCancel: (data, actions) => {
-      // Muestra un mensaje al usuario informando de la cancelación del pago
+      // Función que se ejecutará cuando el usuario cancele el pago
+      // Muestra un mensaje de cancelación al usuario
       this.toast.info('Transaction Canceled', 'Canceled', { timeOut: 3000 });
     },
     onError: (err) => {
-      // Muestra un mensaje al usuario informando del error
+      // Función que se ejecutará cuando ocurra un error en el proceso de pago
+      // Muestra un mensaje de error al usuario
       this.toast.error('Check the sale data', 'Error', { timeOut: 3000 });
     },
   };
 
   getTotal() {
-    let total: number = 0;
+    let total: number = 0; // Inicializa una variable para almacenar el valor total
     this.productos.forEach((item) => {
-      total += item.total.valueOf();
+      total += item.total.valueOf(); // Suma el valor total de cada item al valor total acumulado
     });
-    return total.toFixed(2);
+    return total.toFixed(2); // Devuelve el valor total formateado como una cadena con dos decimales
   }
 
   validarNumero() {
+    // Comprueba si el valor de la variable 'cantidad' es mayor a cero
     if (this.cantidad > 0) {
+      // Muestra un mensaje de éxito si es verdadero
       this.toast.success('Product Added', 'OK', { timeOut: 3000 });
     } else {
+      // Muestra un mensaje de error si es falso
       this.toast.error('Enter a Valid Amount', 'Error', { timeOut: 3000 });
     }
   }

@@ -18,6 +18,7 @@
         <li><a href="#historias-de-usuario">Historias de Usuario</a></li>
         <li><a href="#diagrama-casos-de-uso">Diagrama de Casos de Uso</a></li>
         <li><a href="#modelo-de-la-base-de-datos">Modelo de la Base de Datos</a></li>
+        <li><a href="#diagrama-de-clases">Diagrama de Clases</a></li>
         <li><a href="#diagrama-de-actividades">Diagrama de Actividades</a></li>
         <li><a href="#modelo-vista-controlador">Modelo Vista Controlador</a></li>
         <li><a href="#diagrama-de-componentes">Diagrama de Componentes</a></li>
@@ -98,7 +99,7 @@ Desarrollar un módulo de venta de productos para el gimnasio "Spartacus Fitness
 La base de datos a utilizar será una no relacional, en la que se utilizará como gestor de base de datos MongoDB Atlas. Dicho modelo queda de la siguiente manera.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/70409607/231613845-556ec387-b107-4ce5-8b57-e23fb3c3b876.png">
+  <img src="https://user-images.githubusercontent.com/70409607/231899050-e9a0a451-f5de-43de-b1ae-1720ddb7350d.png">
 </p>
 
 La colección "producto" almacena información de los productos disponibles en el inventario, esta cuenta con los siguientes campos:
@@ -134,6 +135,12 @@ La colección "corteDiario" almacena información del corte diario de caja, esta
 
 Este estándar de la base de datos proporciona una estructura clara y detallada para almacenar información sobre los productos, las ventas y los cortes diarios de caja en el gimnasio. Cada colección tiene campos específicos que facilitan la consulta y el análisis de la información, lo que permite una gestión más eficiente y efectiva de la operación del negocio.
 
+<!-- Diagrama de Clases -->
+### Diagrama de Clases.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/231902024-efc0d18c-10cc-4311-85a8-fa87259fe944.png">
+</p>
+
 <!-- Diagrama de Actividades -->
 ### Diagrama de Actividades.
 <p align="center">
@@ -156,8 +163,9 @@ Este estándar de la base de datos proporciona una estructura clara y detallada 
 
 <!-- Diagrama de Componentes -->
 ### Diagrama de Componentes.
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/70409607/229139629-2d9692b8-80b7-45d6-9a60-fa4598449f93.jpg">
+  <img src="https://user-images.githubusercontent.com/70409607/231906625-4a91c0e2-88b9-4805-83ba-510915b95cfb.png">
 </p>
 
 <!-- Implementación del proyecto -->

@@ -1,0 +1,19 @@
+<main>
+    <h1>Check-in control</h1>
+    <div class="cards-container">
+        <div class="card" *ngFor="let employee of employees" routerLink="/checkIn-empleado/{{employee.id}}">
+            <!--(click)="toCheck(employee)"-->
+            <div class="card-header">
+                <h2 class="card-title">{{employee.nombreUsuario}}</h2>
+            </div>
+            <div class="card-content">
+                <img src="https://via.placeholder.com/150x150" alt="Imagen de la tarjeta">
+                <div>
+                    <p>ID: {{employee.id}}</p>
+                    <p>Tur: {{employee.turno}}</p>
+                    <p>Phone: {{employee.telefono}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

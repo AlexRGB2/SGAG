@@ -1,0 +1,66 @@
+
+.titulobello{
+  margin-bottom: 400px;
+  text-align: center;
+}
+
+.general{
+    margin: auto;
+    margin-top: 50px;
+    width: 1200px;
+    height: 500px;
+  }
+
+  .imagen{
+      margin: 0px;
+      margin-bottom: 100px;
+      padding: 0px;
+      margin-left: 0px;
+      padding: 20px;
+      width: 500px;
+      min-height: 500px;
+      display: grid;
+      grid-template-rows: 20px 50px 1fr 50px;
+      border-radius: 10px;
+      background: rgb(255, 255, 255);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  .information{
+      margin: 0px;
+      padding: 0px;
+      float: right;
+      margin-right: 70px;
+      padding: 20px;
+      width: 600px;
+      height: 500px;
+      min-height: 200px;
+      display: grid;
+      border-radius: 10px;
+      background: rgb(255, 255, 255);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  }
+
+    .inputbox {
+      position: relative;
+      width: 196px;
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .inputbox input {
+      position: relative;
+      width: 100%;
+      padding: 20px 10px 10px;
+      background: transparent;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      color: #23242a;
+      font-size: 1em;
+      letter-spacing: 0.05em;
+      transition: 0.5s;
+      z-index: 10;
+      color: aliceblue;
+    }

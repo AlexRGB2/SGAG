@@ -39,6 +39,7 @@
         <li><a href="#guia-de-uso">Guía de Uso</a></li>
       </ul>
     </li>
+    <li><a href="#contribución">Contribución</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="#participantes">Participantes</a></li>
   </ol>
@@ -231,6 +232,10 @@ Para realizar la instalación del sistema en un entorno de desarrollo se pueden 
 Para comprender el uso del proyecto, de igual manera se dejará un manual con el objetivo de que el cliente comprenda perfectamente cómo es que este funciona.
 
 [Manual de usuario](https://drive.google.com/file/d/10w1T-rVB8mD64FLrF_iim0tTW2T-_WSz/view?usp=share_link)
+
+## Contribución.
+Docente: Gabriel Barrón Rodríguez
+Grupo: GDS0452
 
 ## Contacto.
 Correo electrónico: rojassanchezo63@gmail.com

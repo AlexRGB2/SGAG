@@ -26,8 +26,8 @@
     <li>
       <a href="#implementación">Implementación</a>
       <ul>
-        <li><a href="#estándares-de-base-de-datos">Estándares de Base de Datos</a></li>
         <li><a href="#estándares-de-codificación">Estándares de Codificación</a></li>
+        <li><a href="#código-fuente">Código Fuente</a></li>
       </ul>
     </li>      
     <li><a href="#casos-de-prueba-y-su-ejecución">Casos de Prueba y su Ejecución</a></li>       
@@ -75,10 +75,13 @@ Desarrollar un módulo de venta de productos para el gimnasio "Spartacus Fitness
 ### Historias de Usuario.
 | Id | Como | Quiero | Para |
 |----|----------|---------|------|
-| 01 |Administrador|Que se actualicen los productos en el inventario después de cada venta|Tener un mejor manejo del stock de productos|
-| 02 |Administrador|Que se realicen cortes diarios|Tener un control más preciso de los ingresos por cada día|
-| 03 |Administrador|Ver las ventas de productos realizadas|Verificar qué ventas se han realizado y confirmar qué productos se han vendido|
-| 04 |Cliente|Realizar pagos de productos mediante tarjeta|Comprar productos en caso de que no traiga efectivo|
+| 01 |Administrador|Realizar ventas de productos mediante el sistema de manera sencilla|Reducir el tiempo que toma el realizar ventas de forma manual|
+| 02 |Administrador|Que se actualicen los productos en el inventario después de cada venta|Tener un mejor control del inventario de productos|
+| 03 |Administrador|Que se realicen cortes diarios|Tener un control más preciso de los ingresos por cada día|
+| 04 |Administrador|Visualizar las ventas realizadas y los productos agregados|Verificar estos datos en caso de que sea necesaria una aclaración|
+| 05 |Administrador|Un sistema con interfaz de usuario atractiva pero sencilla|Cualquier empleado pueda hacer uso de ella sin ningún problema|
+| 06 |Administrador|Que el sistema cuente con un buen rendimiento|Llevar a cabo procesos de la manera más eficaz y rápida posible|
+| 07 |Cliente|Distintos métodos de pago|Comprar mis productos favoritos en caso de que no traiga efectivo|
 
 <!-- Diagrama de Casos de Uso -->
 ### Diagrama Casos de Uso.
@@ -187,6 +190,10 @@ A continuación, se presenta un posible estándar de programación para el desar
 
 Siguiendo este estándar de programación, se puede desarrollar aplicaciones web robustas, escalables y seguras utilizando el stack MEAN.
 
+### Código Fuente.
+- [Front-End](https://github.com/AlexRGB2/SGAG/tree/main/Modulo%20Ventas%20Front-End)
+- [Back-End](https://github.com/AlexRGB2/SGAG/tree/main/Modulo%20Ventas-Back-End)
+
 <!-- Casos de prueba -->
 ## Casos de Prueba y su Ejecución.
 Para probar el correcto funcionamiento del módulo y asegurarnos de que el producto entregado al cliente no cuente con ninguna falla se realizaron algunos casos de prueba los cuales se presentan a continuación además de su respectivo resultado obtenido.
@@ -198,16 +205,17 @@ Para probar el correcto funcionamiento del módulo y asegurarnos de que el produ
 
 <!-- Requisitos -->
 ### Requisitos.
-Para instalar el proyecto en un entorno de desarrollo y posteriormente hacer uso de este, es necesario contar con los siguientes requisitos instalados en el ordenador:
+Para instalar el proyecto en un entorno de desarrollo y posteriormente hacer uso de este, es necesario contar con los siguientes requerimientos de software y hardware:
 
-* **Node.js:** Instala la última versión estable de Node.js. Puedes descargarla desde su sitio web oficial: https://nodejs.org/es/
-* **Angular CLI:** Angular CLI es una herramienta de línea de comandos que facilita la creación y gestión de proyectos de Angular. Para instalarlo, abre una terminal o consola y ejecuta el siguiente comando:
+##### Hardware.
+- Procesador de 64 bits con velocidad de reloj de 1 GHz o superior.
+- 4 GB de memoria RAM o superior.
+- Al menos 10 GB de espacio libre en disco duro.
 
-<p align="center">
-  <em>npm install -g @angular/cli</em>
-</p>
-
-* **Editor de código:** Puedes utilizar cualquier editor de código para desarrollar tu proyecto de Angular. Algunas opciones populares son Visual Studio Code, Sublime Text, Atom, entre otros.
+##### Software.
+- Sistema operativo Windows 7 o superior, macOS o Linux.
+- Node.js versión 18.15.0 LTS.
+- Angular CLI versión 14.0.2.
 
 <!-- Instalación -->
 ### Instalación.

@@ -82,7 +82,9 @@ Desarrollar un módulo de venta de productos para el gimnasio "Spartacus Fitness
 | 04 |Administrador|Visualizar las ventas realizadas y los productos agregados|Verificar estos datos en caso de que sea necesaria una aclaración|
 | 05 |Administrador|Un sistema con interfaz de usuario atractiva pero sencilla|Cualquier empleado pueda hacer uso de ella sin ningún problema|
 | 06 |Administrador|Que el sistema cuente con un buen rendimiento|Llevar a cabo procesos de la manera más eficaz y rápida posible|
-| 07 |Cliente|Distintos métodos de pago|Comprar mis productos favoritos en caso de que no traiga efectivo|
+| 07 |Administrador|Que el sistema de ventas cumpla con los colores institucionales de "Spartacus Fitness Center"|Transmitir la identidad del gimnasio y generar identidad corporativa|
+| 08 |Administrador|Que el sistema esté siempre disponible|Registrar ventas de productos siempre que se solicite|
+| 09 |Cliente|Distintos métodos de pago|Comprar mis productos favoritos en caso de que no traiga efectivo|
 
 <!-- Diagrama de Casos de Uso -->
 ### Diagrama Casos de Uso.

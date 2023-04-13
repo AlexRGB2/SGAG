@@ -1,5 +1,4 @@
 // Elaboro Juan de Dios, Victor Garay
-
 import { Component, OnInit } from '@angular/core';
 import { Ventas } from 'src/app/models/producto';
 import { PagosService } from 'src/app/service/pagos.service';

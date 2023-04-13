@@ -35,10 +35,11 @@
       <a href="#guias">Guias</a>
       <ul>
         <li><a href="#requisitos">Requisitos</a></li>
-        <li><a href="#instalación">Instalación</a></li>
-        <li><a href="#uso">Uso</a></li>
+        <li><a href="#guia-de-instalación">Guía de Instalación</a></li>
+        <li><a href="#guia-de-uso">Guía de Uso</a></li>
       </ul>
     </li>
+    <li><a href="#contacto">Contacto</a></li>
     <li><a href="#participantes">Participantes</a></li>
   </ol>
 </details>
@@ -218,17 +219,21 @@ Para instalar el proyecto en un entorno de desarrollo y posteriormente hacer uso
 - Angular CLI versión 14.0.2.
 
 <!-- Instalación -->
-### Instalación.
+### Guía de Instalación.
 Para realizar la instalación del sistema en un entorno de desarrollo se pueden seguir los pasos descritos en el siguiente manual:
 
 [Proceso de instalación de la aplicación](https://drive.google.com/file/d/1HJRDSSOJ2yVTRsRkUHIEDXnO0PHFm_X2/view?usp=share_link)
 
-
-<!-- Instalación -->
-### Uso.
+<!-- Uso -->
+### Guía de Uso.
 Para comprender el uso del proyecto, de igual manera se dejará un manual con el objetivo de que el cliente comprenda perfectamente cómo es que este funciona.
 
 [Manual de usuario](https://drive.google.com/file/d/10w1T-rVB8mD64FLrF_iim0tTW2T-_WSz/view?usp=share_link)
+
+## Contacto.
+Correo electrónico: rojassanchezo63@gmail.com
+
+Teléfono: 4181121719
 
 ## Participantes.
 * [Garay Montes Víctor Andrés](https://github.com/victorsigma)

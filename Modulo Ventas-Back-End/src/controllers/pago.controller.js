@@ -3,11 +3,13 @@ import pago from "../models/pago"
 import products  from "../models/producto";
 import corteDiario from "../models/corteDiario";
 
+// Obtener pagos o ventas
 export const getPagos = async (req, res) => {
     const pagos = await pago.find().lean();
     return res.json(pagos);
 }
 
+// Añadir pago
 export const addPago = async (req, res) => {
     const { productos, tipoPago } = req.body;
 
@@ -53,6 +55,7 @@ export const addPago = async (req, res) => {
     return res.json(pagoSave);
 }
 
+// Eliminar pago
 export const removePago = async (req, res) => {
     const { id } = req.params;
     const pagoData = await pago.findOne({ _id: id });
@@ -62,7 +65,7 @@ export const removePago = async (req, res) => {
     return res.json(removePago);
 }
 
-
+// Añadir corte diario
 export const addCorteDiario = async (req, res) => {
     const count = await corteDiario.find({fecha: {$eq: new Date(new Date().setHours(0, 0, 0, 1))}}).count()
     if(count == 0) {
@@ -119,17 +122,20 @@ export const addCorteDiario = async (req, res) => {
     }
 }
 
+// Obtener cortes
 export const getCortes = async (req, res) => {
     const cortes = await corteDiario.find();
     return res.json(cortes);
 }
 
+// Obtener corte del día actual
 export const getCorteDiario = async (req, res) => {
     const corte = await corteDiario.find({fecha: {$eq: new Date(new Date().setHours(0, 0, 0, 1))}})
 
     return res.json(corte)
 }
 
+// Obtener corte por mes
 export const getCorteMes = async (req, res) => {
     const { mes } = req.params;
     const startOfMonth = new Date(Date.UTC(2023, mes - 1, 1)); // primer día del mes
@@ -138,6 +144,7 @@ export const getCorteMes = async (req, res) => {
     return res.json(cortes)
 }
 
+// Obtener corte por año
 export const getCorteA = async (req, res) => {
     const { anio } = req.params;
     const cortes = await corteDiario.find({

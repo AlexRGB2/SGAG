@@ -1,3 +1,4 @@
+// Creado y editado por Victor Garay Montes
 import { Router } from "express";
 import {  getProductByCodeBar, searchProductByName, searchProductByType } from "../controllers/products.controller";
 

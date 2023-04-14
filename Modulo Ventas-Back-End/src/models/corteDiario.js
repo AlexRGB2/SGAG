@@ -1,3 +1,4 @@
+// Creado y editado por Juan de Dios Ramírez Campos
 import { Schema, model } from "mongoose";
 
 const corteDiarioSchema = new Schema({

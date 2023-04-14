@@ -1,3 +1,4 @@
+// Creado y editado por Oscar Adahir Rojas Sánchez
 import { Schema, model } from "mongoose";
 
 const productoSchema = new Schema({

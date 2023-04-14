@@ -1,3 +1,4 @@
+// Creado y editado por Victor Garay Montes
 import { connect } from "mongoose";
 
 (async () => {

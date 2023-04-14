@@ -1,3 +1,4 @@
+// Creado y editado por Alexis Martínez Bárcenas
 import { Schema, model } from "mongoose";
 
 const pagoSchema = new Schema({

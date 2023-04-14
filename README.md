@@ -18,6 +18,7 @@
         <li><a href="#historias-de-usuario">Historias de Usuario</a></li>
         <li><a href="#diagrama-casos-de-uso">Diagrama de Casos de Uso</a></li>
         <li><a href="#modelo-de-la-base-de-datos">Modelo de la Base de Datos</a></li>
+        <li><a href="#diagrama-de-clases">Diagrama de Clases</a></li>
         <li><a href="#diagrama-de-actividades">Diagrama de Actividades</a></li>
         <li><a href="#modelo-vista-controlador">Modelo Vista Controlador</a></li>
         <li><a href="#diagrama-de-componentes">Diagrama de Componentes</a></li>
@@ -39,6 +40,7 @@
         <li><a href="#guia-de-uso">Guía de Uso</a></li>
       </ul>
     </li>
+    <li><a href="#contribución">Contribución</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="#participantes">Participantes</a></li>
   </ol>
@@ -82,7 +84,9 @@ Desarrollar un módulo de venta de productos para el gimnasio "Spartacus Fitness
 | 04 |Administrador|Visualizar las ventas realizadas y los productos agregados|Verificar estos datos en caso de que sea necesaria una aclaración|
 | 05 |Administrador|Un sistema con interfaz de usuario atractiva pero sencilla|Cualquier empleado pueda hacer uso de ella sin ningún problema|
 | 06 |Administrador|Que el sistema cuente con un buen rendimiento|Llevar a cabo procesos de la manera más eficaz y rápida posible|
-| 07 |Cliente|Distintos métodos de pago|Comprar mis productos favoritos en caso de que no traiga efectivo|
+| 07 |Administrador|Que el sistema de ventas cumpla con los colores institucionales de "Spartacus Fitness Center"|Transmitir la identidad del gimnasio y generar identidad corporativa|
+| 08 |Administrador|Que el sistema esté siempre disponible|Registrar ventas de productos siempre que se solicite|
+| 09 |Cliente|Distintos métodos de pago|Comprar mis productos favoritos en caso de que no traiga efectivo|
 
 <!-- Diagrama de Casos de Uso -->
 ### Diagrama Casos de Uso.
@@ -95,7 +99,7 @@ Desarrollar un módulo de venta de productos para el gimnasio "Spartacus Fitness
 La base de datos a utilizar será una no relacional, en la que se utilizará como gestor de base de datos MongoDB Atlas. Dicho modelo queda de la siguiente manera.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/70409607/231613845-556ec387-b107-4ce5-8b57-e23fb3c3b876.png">
+  <img src="https://user-images.githubusercontent.com/70409607/231899050-e9a0a451-f5de-43de-b1ae-1720ddb7350d.png">
 </p>
 
 La colección "producto" almacena información de los productos disponibles en el inventario, esta cuenta con los siguientes campos:
@@ -131,6 +135,12 @@ La colección "corteDiario" almacena información del corte diario de caja, esta
 
 Este estándar de la base de datos proporciona una estructura clara y detallada para almacenar información sobre los productos, las ventas y los cortes diarios de caja en el gimnasio. Cada colección tiene campos específicos que facilitan la consulta y el análisis de la información, lo que permite una gestión más eficiente y efectiva de la operación del negocio.
 
+<!-- Diagrama de Clases -->
+### Diagrama de Clases.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70409607/231902024-efc0d18c-10cc-4311-85a8-fa87259fe944.png">
+</p>
+
 <!-- Diagrama de Actividades -->
 ### Diagrama de Actividades.
 <p align="center">
@@ -153,8 +163,9 @@ Este estándar de la base de datos proporciona una estructura clara y detallada 
 
 <!-- Diagrama de Componentes -->
 ### Diagrama de Componentes.
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/70409607/229139629-2d9692b8-80b7-45d6-9a60-fa4598449f93.jpg">
+  <img src="https://user-images.githubusercontent.com/70409607/231913742-bdeb7ec7-aee5-4386-b487-da49b3ccf50f.png">
 </p>
 
 <!-- Implementación del proyecto -->
@@ -229,6 +240,11 @@ Para realizar la instalación del sistema en un entorno de desarrollo se pueden 
 Para comprender el uso del proyecto, de igual manera se dejará un manual con el objetivo de que el cliente comprenda perfectamente cómo es que este funciona.
 
 [Manual de usuario](https://drive.google.com/file/d/10w1T-rVB8mD64FLrF_iim0tTW2T-_WSz/view?usp=share_link)
+
+## Contribución.
+Docente: Gabriel Barrón Rodríguez
+
+Grupo: GDS0452
 
 ## Contacto.
 Correo electrónico: rojassanchezo63@gmail.com

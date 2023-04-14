@@ -165,7 +165,7 @@ Este estándar de la base de datos proporciona una estructura clara y detallada 
 ### Diagrama de Componentes.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/70409607/231906625-4a91c0e2-88b9-4805-83ba-510915b95cfb.png">
+  <img src="https://user-images.githubusercontent.com/70409607/231913742-bdeb7ec7-aee5-4386-b487-da49b3ccf50f.png">
 </p>
 
 <!-- Implementación del proyecto -->

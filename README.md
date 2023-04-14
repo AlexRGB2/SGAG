@@ -243,6 +243,7 @@ Para comprender el uso del proyecto, de igual manera se dejará un manual con el
 
 ## Contribución.
 Docente: Gabriel Barrón Rodríguez
+
 Grupo: GDS0452
 
 ## Contacto.

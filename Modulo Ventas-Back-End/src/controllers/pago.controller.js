@@ -1,3 +1,4 @@
+// Creado y editado por Victor Garay Montes, Oscar Rojas Sánchez y Alexis Martínez Bárcenas
 import pago from "../models/pago"
 import products  from "../models/producto";
 import corteDiario from "../models/corteDiario";

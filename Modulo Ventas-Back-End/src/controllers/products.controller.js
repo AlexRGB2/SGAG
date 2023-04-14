@@ -7,6 +7,7 @@ export const getProducts = async (req, res) => {
   return res.json(product);
 }; */
 
+// Obtener producto
 export const getProductByCodeBar = async (req, res) => {
   const { codeBar } = req.params;
   const product = await products.findOne({ codeBar: codeBar });
@@ -71,7 +72,7 @@ export const updateProduct = async (req, res) => {
   }
 };  */
 
-
+// Buscar producto por nombre
 export const searchProductByName = async (req, res) => {
   const { name } = req.params;
   const productList = await products.find({
@@ -81,6 +82,7 @@ export const searchProductByName = async (req, res) => {
   res.json(productList);
 }; 
 
+// Buscar producto por tipo
 export const searchProductByType = async (req, res) => {
   const { type } = req.params;
   const productList = await products.find({

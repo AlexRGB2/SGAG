@@ -1,3 +1,4 @@
+// Creado y editado por Victor Garay Montes
 import express from 'express';
 import cors from 'cors';
 import config from './config';

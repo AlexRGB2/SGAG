@@ -1,3 +1,4 @@
+// Creado y editado por Victor Garay Montes
 import { Router } from "express";
 import { addCorteDiario, addPago, getPagos, removePago, getCorteDiario, getCorteMes, getCorteA, getCortes } from "../controllers/pago.controller";
 

@@ -28,7 +28,7 @@
 
         <!--Edad-->
         <div class="input">
-          <input autocomplete="off" type="text" id="edad" name="edad" [(ngModel)]="cliente.edad" required>
+          <input autocomplete="off" type="number" id="edad" name="edad" [(ngModel)]="cliente.edad" required>
           <label for="text">Age</label>
         </div>
         <!--Email-->
@@ -39,7 +39,7 @@
         <!--Telefono-->
         <div class="input">
           <input autocomplete="off" type="number" id="telefono" name="telefono" [(ngModel)]="cliente.telefono" required>
-          <label for="number">Price</label>
+          <label for="number">Phone</label>
         </div>
         <!--Subscripcion-->
         <div class="input">
@@ -49,9 +49,9 @@
         </div>
         <div class="botones" style="display: flex;justify-content: space-between;">
           <!--Crear-->
-          <input type="submit" class="btn" value="Editar" id="BootonCrear">
+          <input type="submit" class="btn" value="Edit" id="BootonCrear">
           <!--Salir-->
-          <input type="submit" class="btn" value="Salir" routerLink="/cliente/lista">
+          <input type="submit" class="btn" value="Exit" routerLink="/cliente/lista">
         </div>
       </form>
     </div>

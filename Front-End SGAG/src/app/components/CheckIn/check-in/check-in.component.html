@@ -14,11 +14,7 @@
     Las propiedades "enable" y "device" se enlazan a las propiedades "scannerEnabled" y "myDevice" del componente,
     respectivamente. Los eventos "camerasFound" y "scanSuccess" se enlazan a los métodos "camerasFoundHandler" y
     "scanSuccessHandler" del componente, respectivamente. -->
-    <zxing-scanner style="width: 500px;"
-      [enable]="scannerEnabled"
-      [device]="myDevice"
-      (camerasFound)="camerasFoundHandler($event)"
-      (scanSuccess)="scanSuccessHandler($event)"
-    ></zxing-scanner>
+    <zxing-scanner style="width: 500px;" [enable]="scannerEnabled" [device]="myDevice"
+      (camerasFound)="camerasFoundHandler($event)" (scanSuccess)="scanSuccessHandler($event)"></zxing-scanner>
   </div>
 </div>

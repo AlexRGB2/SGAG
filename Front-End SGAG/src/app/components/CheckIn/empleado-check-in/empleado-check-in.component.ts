@@ -239,10 +239,10 @@ export class EmpleadoCheckInComponent implements OnInit {
             if (this.dataCalendar.length != 0) {
               this.dataCalendar.forEach((c: any) => {
                 if (c.Tipo === 'Entrada') {
-                  entry.textContent = c.Hora;
-                  horaES[0] = c.Hora;
+                  entry.textContent = c.hora;
+                  horaES[0] = c.hora;
                 } else if (c.Tipo === 'Salida') {
-                  horaES[1] = c.Hora;
+                  horaES[1] = c.hora;
                 }
                 Swal.fire({
                   title: 'Datos del día',

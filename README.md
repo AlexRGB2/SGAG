@@ -203,7 +203,7 @@ A continuación, se presenta un posible estándar de programación para el desar
 Siguiendo este estándar de programación, se puede desarrollar aplicaciones web robustas, escalables y seguras utilizando el stack MEAN.
 
 ### Código Fuente.
-- [Front-End](https://github.com/AlexRGB2/SGAG/tree/main/Modulo%20Ventas%20Front-End)
+- [Front-End](https://github.com/AlexRGB2/SGAG/tree/main/Front-End%20SGAG)
 - [Back-End](https://github.com/AlexRGB2/SGAG/tree/main/Modulo%20Ventas-Back-End)
 
 <!-- Casos de prueba -->

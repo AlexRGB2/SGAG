@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Clase } from 'src/app/models/clase';
+import { ClienteService } from 'src/app/service/cliente.service';
 import { ClaseService } from 'src/app/service/clase.service';
 import { TokenService } from 'src/app/service/token.service';
 import { ToastrService } from 'ngx-toastr';
@@ -12,8 +13,11 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class DetalleClaseComponent implements OnInit {
   listClases: any;
+  listClientes: any;
+
   constructor(
     private claseService: ClaseService,
+    private clienteService: ClienteService,
     private token: TokenService,
     private toast: ToastrService,
     private router: Router,
@@ -39,6 +43,22 @@ export class DetalleClaseComponent implements OnInit {
       },
       (error) => {
         console.log(error);
+      }
+    );
+    this.listaClientes();
+  }
+
+  listaClientes(): void {
+    this.clienteService.list().subscribe(
+      (data) => {
+        this.listClientes = data;
+        console.log('Clientes:');
+        console.log(this.listClientes);
+        $('#loading').css('display', 'none');
+      },
+      (err) => {
+        console.log(err);
+        $('#loading').css('display', 'none');
       }
     );
   }

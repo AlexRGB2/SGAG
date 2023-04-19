@@ -1,22 +1,27 @@
 <header>
-    <h1>Lista de empleados</h1>
-    <div class="search-container">
-      <input type="text" class="form-control" placeholder="Buscar empleado..." name="filterPost" [(ngModel)]="filterPost">
-      <button *ngIf="isAdmin" routerLink="/register">Agregar empleado</button>
-    </div>
+  <h1>Employees</h1>
+  <div class="search-container">
+    <input type="text" class="form-control" placeholder="Search Employee..." name="filterPost" [(ngModel)]="filterPost">
+    <button *ngIf="isAdmin" routerLink="/register">Add</button>
+  </div>
 </header>
 <div class="employee-container">
-    <div class="employee-card" *ngFor="let employee of employees | filter:filterPost" >
-      <img  src="https://scontent.fcyw4-1.fna.fbcdn.net/v/t1.15752-9/336584590_963190704697464_3942002476864333430_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=t96qot8noOUAX8EeDYC&_nc_ht=scontent.fcyw4-1.fna&oh=03_AdQOGEfETgymt2L3mYdm41NgOjnOxDnJzdxuT3CScv4Ccg&oe=6442F097" alt="Foto del empleado" >
+  <div class="employee-card" *ngFor="let employee of employees | filter:filterPost">
+    <img
+      src="https://scontent.fcyw4-1.fna.fbcdn.net/v/t1.15752-9/336584590_963190704697464_3942002476864333430_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=t96qot8noOUAX8EeDYC&_nc_ht=scontent.fcyw4-1.fna&oh=03_AdQOGEfETgymt2L3mYdm41NgOjnOxDnJzdxuT3CScv4Ccg&oe=6442F097"
+      alt="Foto del empleado">
 
-      <h2>{{employee.nombreUsuario}}</h2>
-      <!-- <p>{{employee.Rol[0]}}</p> -->
-      <p><strong>Email:</strong>{{employee.email}}</p>
-      <p><strong>Phone:</strong>{{employee.telefono}}</p>
-      <div class="buttons">
-          <button *ngIf="isAdmin" routerLink="/empelado/editar/{{employee.id}}">Edit</button>
-          <button *ngIf="isAdmin" (click)="deleteEmployee(employee)">Delete</button>
-          <button *ngIf="isAdmin" (click)="showQR(employee)" style="margin-left: 10px;">Ver QR</button>
-        </div>
+    <h2>{{employee.nombreUsuario}}</h2>
+    <!-- <p>{{employee.Rol[0]}}</p> -->
+    <p><strong>Email:</strong>{{employee.email}}</p>
+    <p><strong>Phone:</strong>{{employee.telefono}}</p>
+    <div class="buttons">
+      <button *ngIf="isAdmin" routerLink="/empelado/editar/{{employee.id}}" class="btn btn-outline-primary"
+        style="margin-right: 5px;">Edit</button>
+      <button *ngIf="isAdmin" (click)="deleteEmployee(employee)" class="btn btn-outline-primary"
+        style="margin-right: 5px;">Delete</button>
+      <button *ngIf="isAdmin" (click)="showQR(employee)" style="margin-left: 10px;" class="btn btn-outline-primary"
+        style="margin-right: 5px;">View QR</button>
     </div>
+  </div>
 </div>

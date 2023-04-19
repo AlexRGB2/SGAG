@@ -7,25 +7,28 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-ver-empleado',
   templateUrl: './ver-empleado.component.html',
-  styleUrls: ['./ver-empleado.component.css']
+  styleUrls: ['./ver-empleado.component.css'],
 })
 export class VerEmpleadoComponent implements OnInit {
-
-  isAdmin:boolean=false;
-  filterPost='';
+  isAdmin: boolean = false;
+  filterPost = '';
   employees: any = [];
   roles: any = [];
 
-  constructor(private authService:AuthService,private router:Router,private token:TokenService) { 
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private token: TokenService
+  ) {
     this.authService.list().subscribe(
-      resp=>{
+      (resp) => {
         console.log(resp);
         this.employees = resp;
         // this.capyfit.getOneRol(this.employees.IdEmpleado).subscribe(res => {
         //   console.log(res);
         // })
       },
-      err => console.error(err)
+      (err) => console.error(err)
     );
   }
 
@@ -33,14 +36,13 @@ export class VerEmpleadoComponent implements OnInit {
     this.isAdmin = this.token.isAdmin();
   }
 
-
-  deleteEmployee(employee:any){
+  deleteEmployee(employee: any) {
     console.log(employee);
     console.log(employee.IdEmpleado);
     Swal.fire({
-      title: '¿Quieres elimanar el empelado?',//+this.selectedRol.Nombre,//Estás seguro?
-      text: 'Esta acción no se puede deshacer.',//+this.selectedRol.Nombre,
-      html: '<p><strong>Empleado: </strong>'+employee.nombreUsuario+'</p>',
+      title: '¿Quieres elimanar el empelado?', //+this.selectedRol.Nombre,//Estás seguro?
+      text: 'Esta acción no se puede deshacer.', //+this.selectedRol.Nombre,
+      html: '<p><strong>Empleado: </strong>' + employee.nombreUsuario + '</p>',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Sí, hacerlo',
@@ -50,44 +52,54 @@ export class VerEmpleadoComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: '¡Hecho!', 
-          text: 'Has eliminado al empleado '+employee.nombreUsuario,
+          title: '¡Hecho!',
+          text: 'Has eliminado al empleado ' + employee.nombreUsuario,
           icon: 'success',
           confirmButtonText: 'OK',
           confirmButtonColor: '#1a1a1a',
         });
         //this.deleteRol(rol);
-        this.authService.delete(employee.id).subscribe(res => {
-          console.log(res)
-        }, err => console.error(err));
-        this.router.navigate(['']);
+        this.authService.delete(employee.id).subscribe(
+          (res) => {
+            console.log(res);
+          },
+          (err) => console.error(err)
+        );
+        window.location.reload();
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
-          title: 'Cancelado', 
+          title: 'Cancelado',
           text: 'No se ha eliminado al empleado',
           icon: 'error',
           confirmButtonText: 'OK',
           confirmButtonColor: '#1a1a1a',
         });
       }
-    }); 
+    });
   }
 
-  showQR(empQR:any){
+  showQR(empQR: any) {
     delete empQR.Password;
     let data = JSON.stringify(empQR);
     let encodedData = encodeURIComponent(data);
-    let api = 'https://api.qrserver.com/v1/create-qr-code/?data=' + encodedData + '&size=250x250';
+    let api =
+      'https://api.qrserver.com/v1/create-qr-code/?data=' +
+      encodedData +
+      '&size=250x250';
     console.log(api);
-    
+
     console.log(data);
     Swal.fire({
       title: 'Consulta QR',
-      html: '<p>'+empQR.nombreUsuario+'</p><img src="'+api+'" height="250px" width="250px">',// height="50px" width="50px"
+      html:
+        '<p>' +
+        empQR.nombreUsuario +
+        '</p><img src="' +
+        api +
+        '" height="250px" width="250px">', // height="50px" width="50px"
       icon: 'info',
       confirmButtonText: 'OK',
       confirmButtonColor: '#1a1a1a',
     });
   }
-
 }

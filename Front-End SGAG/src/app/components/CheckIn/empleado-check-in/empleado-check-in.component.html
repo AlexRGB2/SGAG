@@ -1,19 +1,17 @@
 <div class="contenedor">
   <div class="info-employee">
-    <img src="https://raw.githubusercontent.com/CarlosMR75/Project-Rook/main/img/ast.png" alt=""
-      class="bd-placeholder-img rounded-circle" height="155px" width="155px">
-    <h1 *ngIf="emp">{{emp.nombreUsuario}}</h1>
+    <img [src]="emp.foto" alt="" class="bd-placeholder-img rounded-circle" height="155px" width="155px">
+    <h1 *ngIf="emp" style="text-transform: capitalize;">{{emp.nombreUsuario}}</h1>
   </div>
   <div class="employee-body d-flex flex-row">
     <div class="info-body flex-fill me-4">
-      <p>Name: {{emp.nombreUsuario}}</p>
+      <p style="text-transform: capitalize;">Name: {{emp.nombreUsuario}}</p>
       <p>Age: {{emp.edad}}</p>
       <p>Salary: ${{emp.sueldo}}</p>
       <p>Turn: {{emp.turno}}</p>
       <p>Email: {{emp.email}}</p>
       <p>Phone: {{emp.telefono}}</p>
       <p>Employee Number: {{emp.id}}</p>
-      <!-- <p>Rol: Mantenimiento</p> -->
     </div>
     <div class="stats-body flex-fill">
       <ul class="nav nav-tabs" role="tablist">
@@ -50,7 +48,7 @@
             <tbody>
               <tr *ngFor="let ch of checks">
                 <td>{{ch.id}}</td>
-                <td>{{ch.fecha}}</td>
+                <td>{{ch.fecha }}</td>
                 <td>{{ch.hora}}</td>
                 <td>{{ch.tipo}}</td>
               </tr>

@@ -47,6 +47,7 @@ import { NuevaClaseComponent } from './components/Clases/nueva-clase/nueva-clase
 import { FilterClasePipe } from './pipes/filter-clase.pipe';
 import { DetalleClaseComponent } from './components/Clases/detalle-clase/detalle-clase.component';
 import { ListaClientesComponent } from './components/Clases/lista-clientes/lista-clientes.component';
+import { FilterEmployeesPipe } from './pipes/filter-employees.pipe';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { ListaClientesComponent } from './components/Clases/lista-clientes/lista
     FilterClasePipe,
     DetalleClaseComponent,
     ListaClientesComponent,
+    FilterEmployeesPipe,
   ],
   imports: [
     BrowserModule,

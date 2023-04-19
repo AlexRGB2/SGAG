@@ -1,15 +1,13 @@
 div {
-    text-align: center;
+  text-align: center;
 }
 .container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .centered {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-  }
-  
+  display: flex;
+  justify-content: center;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

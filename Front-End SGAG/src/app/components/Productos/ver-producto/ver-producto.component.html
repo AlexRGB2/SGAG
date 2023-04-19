@@ -50,9 +50,9 @@
       <td>{{producto.tipo}}</td>
       <td>{{producto.nombreProvedor}}</td>
       <td>${{producto.precio}}</td>
-      <td *ngIf="isAdmin"><button class="btn btn-outline-warning" style="margin-right: 2px; width: 100px;"
+      <td *ngIf="isAdmin"><button class="btn btn-outline-warning m-2" style="margin-right: 2px; width: 100px;"
           routerLink="/producto/editar/{{producto.id}}"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
-        <button class="btn btn-outline-danger" (click)="onDelete(producto.id)" style="width: 100px;"><i
+        <button class="btn btn-outline-danger m-2" (click)="onDelete(producto.id)" style="width: 100px;"><i
             class="fa-solid fa-trash"></i>Delete</button>
       </td>
     </tr>

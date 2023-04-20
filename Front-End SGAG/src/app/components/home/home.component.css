@@ -1,21 +1,21 @@
-#carrusel{
-    background-color: #434242;
-    padding: 15px;
-        padding-top: 50px;
-    padding-bottom: 50px;
+#carrusel {
+  background-color: #434242;
+  padding: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-#cards{
-    background-color: #DC0000;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+#cards {
+  background-color: #dc0000;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .plan-card {
-  background: #C8B6A6;
+  background: #c8b6a6;
   width: 15rem;
   height: 600px;
   padding-left: 2rem;
@@ -28,14 +28,12 @@
   box-shadow: 0 6px 30px rgba(207, 212, 222, 0.3);
   font-family: "Poppins", sans-serif;
   margin-right: 75px;
-
 }
 
 .plan-card h2 {
   margin-bottom: 15px;
   font-size: 27px;
   font-weight: 600;
-
 }
 
 .plan-card h2 span {
@@ -47,18 +45,17 @@
 }
 
 .etiquet-price {
-
   position: relative;
   background: #fdbd4a;
   width: 14.46rem;
   margin-left: -0.65rem;
-  padding: .2rem 1.2rem;
+  padding: 0.2rem 1.2rem;
   border-radius: 5px 0 0 5px;
 }
 
 .etiquet-price p {
   margin: 0;
-  padding-top: .4rem;
+  padding-top: 0.4rem;
   display: flex;
   font-size: 1.9rem;
   font-weight: 500;
@@ -92,10 +89,9 @@
 
 .benefits-list {
   margin-top: 15px;
-
 }
 
-.benefits-list p{
+.benefits-list p {
   font-size: 14px;
   text-align: justify;
 }
@@ -108,14 +104,14 @@
 .benefits-list ul li {
   color: #4d4d4d;
   list-style: none;
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .benefits-list ul li svg {
-  width: .9rem;
+  width: 0.9rem;
   fill: currentColor;
 }
 
@@ -138,8 +134,8 @@
   padding: 20px 15px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: .7rem;
-  letter-spacing: .05rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -151,26 +147,12 @@
 
 .button-get-plan .svg-rocket {
   margin-right: 10px;
-  width: .9rem;
+  width: 0.9rem;
   fill: currentColor;
-}#carrusel{
-    background-color: #434242;
-    padding: 15px;
-        padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-#cards{
-    background-color: #DC0000;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 
 .plan-card {
-  background: #C8B6A6;
+  background: #c8b6a6;
   width: 15rem;
   height: 600px;
   padding-left: 2rem;
@@ -183,14 +165,12 @@
   box-shadow: 0 6px 30px rgba(207, 212, 222, 0.3);
   font-family: "Poppins", sans-serif;
   margin-right: 75px;
-
 }
 
 .plan-card h2 {
   margin-bottom: 15px;
   font-size: 27px;
   font-weight: 600;
-
 }
 
 .plan-card h2 span {
@@ -202,18 +182,17 @@
 }
 
 .etiquet-price {
-
   position: relative;
   background: #fdbd4a;
   width: 14.46rem;
   margin-left: -0.65rem;
-  padding: .2rem 1.2rem;
+  padding: 0.2rem 1.2rem;
   border-radius: 5px 0 0 5px;
 }
 
 .etiquet-price p {
   margin: 0;
-  padding-top: .4rem;
+  padding-top: 0.4rem;
   display: flex;
   font-size: 1.9rem;
   font-weight: 500;
@@ -247,10 +226,9 @@
 
 .benefits-list {
   margin-top: 15px;
-
 }
 
-.benefits-list p{
+.benefits-list p {
   font-size: 14px;
   text-align: justify;
 }
@@ -263,14 +241,14 @@
 .benefits-list ul li {
   color: #4d4d4d;
   list-style: none;
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .benefits-list ul li svg {
-  width: .9rem;
+  width: 0.9rem;
   fill: currentColor;
 }
 
@@ -293,8 +271,8 @@
   padding: 20px 15px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: .7rem;
-  letter-spacing: .05rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -306,44 +284,44 @@
 
 .button-get-plan .svg-rocket {
   margin-right: 10px;
-  width: .9rem;
+  width: 0.9rem;
   fill: currentColor;
 }
 
-#divImg{
+#divImg {
   display: flex;
   margin-bottom: 15px;
 }
 
-#image{
+#image {
   margin-right: 10px;
 }
 
-#h6{
+#h6 {
   margin-top: 15px;
-  color: #DC0000;
+  color: #dc0000;
 }
 
-#footer{
+#footer {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-#divImg{
+#divImg {
   display: flex;
   margin-bottom: 15px;
 }
 
-#image{
+#image {
   margin-right: 10px;
 }
 
-#h6{
+#h6 {
   margin-top: 15px;
-  color: #DC0000;
+  color: #dc0000;
 }
 
-#footer{
+#footer {
   padding-top: 20px;
   padding-bottom: 20px;
 }

@@ -40,26 +40,28 @@ export class DetalleClaseComponent implements OnInit {
       (data) => {
         console.log(data);
         this.listClases = data;
+        this.listaClientes();
       },
       (error) => {
         console.log(error);
       }
     );
-    this.listaClientes();
   }
 
   listaClientes(): void {
-    this.clienteService.list().subscribe(
-      (data) => {
-        this.listClientes = data;
-        console.log('Clientes:');
-        console.log(this.listClientes);
-        $('#loading').css('display', 'none');
-      },
-      (err) => {
-        console.log(err);
-        $('#loading').css('display', 'none');
-      }
-    );
+    this.clienteService
+      .listByNombreClase(this.listClases.nombreClase)
+      .subscribe(
+        (data) => {
+          this.listClientes = data;
+          console.log('Clientes:');
+          console.log(this.listClientes);
+          $('#loading').css('display', 'none');
+        },
+        (err) => {
+          console.log(err);
+          $('#loading').css('display', 'none');
+        }
+      );
   }
 }

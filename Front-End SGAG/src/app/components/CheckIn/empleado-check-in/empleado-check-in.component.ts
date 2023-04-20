@@ -46,10 +46,7 @@ export class EmpleadoCheckInComponent implements OnInit {
     this.p = params;
     this.capyfit.detail(params['id']).subscribe(
       (res) => {
-        console.log('Empleado:');
-        console.log(res);
         this.emp = res;
-        console.log(this.emp);
       },
       (err) => console.log(err)
     );
@@ -58,16 +55,12 @@ export class EmpleadoCheckInComponent implements OnInit {
   cargarRet() {
     this.checkin.listCheckInForIdEmpleado(this.p['id']).subscribe(
       (resp) => {
-        console.log('____________________');
-        console.log('Check');
         this.pla = resp;
         for (let i = 0; i < this.pla.length; i++) {
           let [day, month, year] = this.pla[i].fecha.split('-');
           let newMonth = month - 1;
           this.pla[i].fecha = `${day}-${newMonth}-${year}`;
         }
-        console.log('XXXXXXXXXXXXXXDXDXDXDXD');
-        console.log(this.pla);
         this.pla.forEach((element: CheckIn) => {
           if (element.tipo === 'Entrada') {
             let [hours1, minutes1] = element.hora.split(':');
@@ -86,9 +79,7 @@ export class EmpleadoCheckInComponent implements OnInit {
             } else {
               element.estado = 'Asistencia';
             }
-            console.log('New: ');
             this.r = element;
-            console.log(this.r);
           }
           this.updateCalendar();
         });
@@ -109,19 +100,23 @@ export class EmpleadoCheckInComponent implements OnInit {
     this.faltas = [];
     this.retardos = [];
 
-    console.log('C H E: ' + this.pla);
-
     //this.checarHora();
 
     this.checkin.listCheckInForIdEmpleado(this.p['id']).subscribe(
       (resp) => {
         this.checks = resp;
+        this.checks.forEach((ch: CheckIn) => {
+          if (ch.tipo === 'Entrada') {
+            ch.tipo = 'Entry';
+          } else {
+            ch.tipo = 'Departure';
+          }
+        });
         // for (let i = 0; i < this.checks.length; i++) {
         //   let [day, month, year] = this.checks[i].fecha.split('-');
         //   let newMonth = month - 1;
         //   this.checks[i].fecha = `${day}-${newMonth}-${year}`;
         // }
-        console.log(this.checks);
       },
       (err) => console.error(err)
     );
@@ -177,7 +172,7 @@ export class EmpleadoCheckInComponent implements OnInit {
     this.monthTitle.textContent = new Date(
       this.year,
       this.month
-    ).toLocaleString('default', { month: 'long', year: 'numeric' });
+    ).toLocaleString('en-US', { month: 'long', year: 'numeric' });
 
     // Clear the grid
     this.grid.innerHTML = '';
@@ -222,14 +217,10 @@ export class EmpleadoCheckInComponent implements OnInit {
     calendarDays.forEach((day: Element) => {
       day.addEventListener('click', () => {
         let fecha: string = '';
-        console.log(day.textContent);
         if (day.textContent) {
           let mes = this.month + 1;
           fecha = day.textContent + '-' + mes + '-' + this.year;
-          console.log('Fecha Seleccionada: ' + fecha);
-          console.log('ID: ' + this.emp.id);
           this.checkin.reviewCheckIn(this.emp.id, fecha).subscribe((res) => {
-            console.log(res);
             this.dataCalendar = res;
             let entry = document.getElementById(
               'entry'
@@ -238,18 +229,18 @@ export class EmpleadoCheckInComponent implements OnInit {
             // Si hay datos en la respuesta, actualiza la hora de entrada en la interfaz de usuario
             if (this.dataCalendar.length != 0) {
               this.dataCalendar.forEach((c: any) => {
-                if (c.Tipo === 'Entrada') {
+                if (c.tipo === 'Entrada') {
                   entry.textContent = c.hora;
                   horaES[0] = c.hora;
-                } else if (c.Tipo === 'Salida') {
+                } else if (c.tipo === 'Salida') {
                   horaES[1] = c.hora;
                 }
                 Swal.fire({
-                  title: 'Datos del día',
+                  title: 'Data of the day',
                   html:
-                    'Hora de entrada: ' +
+                    'Entry Time: ' +
                     horaES[0] +
-                    '<br>Hora de salida: ' +
+                    '<br>Departure Time: ' +
                     horaES[1],
                   icon: 'info',
                   showCloseButton: true,
@@ -260,10 +251,10 @@ export class EmpleadoCheckInComponent implements OnInit {
               });
             } else {
               // Si no hay datos en la respuesta, establece el texto en "Ningún día seleccionado"
-              entry.textContent = 'Ningún día seleccionado';
+              entry.textContent = 'No day selected';
               Swal.fire({
                 title: 'Error',
-                html: 'Seleccione un día válido',
+                html: 'Select a valid day',
                 icon: 'error',
                 showCloseButton: true,
                 confirmButtonText: 'OK',
@@ -297,7 +288,7 @@ export class EmpleadoCheckInComponent implements OnInit {
     const myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['Asistencias', 'Retardos '], //, 'Faltas'
+        labels: ['Assistance', 'Delays '], //, 'Faltas'
         datasets: [
           {
             label: '',
@@ -326,7 +317,7 @@ export class EmpleadoCheckInComponent implements OnInit {
         plugins: {
           title: {
             display: true,
-            text: 'Registro del Checkin',
+            text: 'Checkin registration',
           },
         },
       },

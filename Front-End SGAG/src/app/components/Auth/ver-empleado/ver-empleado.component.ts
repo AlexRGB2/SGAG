@@ -40,20 +40,20 @@ export class VerEmpleadoComponent implements OnInit {
     console.log(employee);
     console.log(employee.IdEmpleado);
     Swal.fire({
-      title: '¿Quieres elimanar el empelado?', //+this.selectedRol.Nombre,//Estás seguro?
-      text: 'Esta acción no se puede deshacer.', //+this.selectedRol.Nombre,
-      html: '<p><strong>Empleado: </strong>' + employee.nombreUsuario + '</p>',
+      title: 'Do you want to delete the employee?', //+this.selectedRol.Nombre,//Estás seguro?
+      text: 'This action can´t be undone.', //+this.selectedRol.Nombre,
+      html: '<p><strong>Employee: </strong>' + employee.nombreUsuario + '</p>',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Sí, hacerlo',
+      confirmButtonText: 'Yes, do it',
       confirmButtonColor: '#1a1a1a',
-      cancelButtonText: 'Cancelar',
+      cancelButtonText: 'Cancel',
       cancelButtonColor: '#b9b9b9',
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: '¡Hecho!',
-          text: 'Has eliminado al empleado ' + employee.nombreUsuario,
+          title: 'Done!',
+          text: 'You have deleted the employee ' + employee.nombreUsuario,
           icon: 'success',
           confirmButtonText: 'OK',
           confirmButtonColor: '#1a1a1a',
@@ -68,8 +68,8 @@ export class VerEmpleadoComponent implements OnInit {
         window.location.reload();
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
-          title: 'Cancelado',
-          text: 'No se ha eliminado al empleado',
+          title: 'Canceled',
+          text: 'The employee has not been deleted',
           icon: 'error',
           confirmButtonText: 'OK',
           confirmButtonColor: '#1a1a1a',
@@ -90,7 +90,7 @@ export class VerEmpleadoComponent implements OnInit {
 
     console.log(data);
     Swal.fire({
-      title: 'Consulta QR',
+      title: 'Employee QR',
       html:
         '<p>' +
         empQR.nombreUsuario +

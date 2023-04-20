@@ -1,82 +1,51 @@
 <h1 style="text-align: center">Class Details</h1>
-<div id="contenido2">
-  <div class="container">
-    <div class="general">
-      <div class="information">
-        <a class="list-group-item"><b>Description</b>
-          <p>{{ listClases.descripcion }}</p>
-        </a>
-        <a class="list-group-item"><b>Price</b>
-          <p>{{ listClases.costo }}</p>
-        </a>
-        <a class="list-group-item"><b>Instructor </b>
-          <p>{{ listClases.nombreInstructor }}</p>
-        </a>
 
-        <a class="list-group-item"><b>Date </b>
-          <p>{{ listClases.fecha }}</p>
-        </a>
-        <a class="list-group-item"><b>Time </b>
-          <p>{{ listClases.hora }}</p>
-        </a>
-        <a class="list-group-item"><b>Quota</b>
-          <p>{{ listClases.cupo }}</p>
-        </a>
-      </div>
-      <div class="imagen">
-        <div class="titulobello">
-          <h1>{{ listClases.nombreClase }}</h1>
-          <br />
-        </div>
-        <br />
-        <br />
-        <img src="{{ listClases.fotoClase }}" class="card-img-top img" width="300px" height="300px"
-          style="margin-top: 40px" />
-        <br />
-        <br />
-      </div>
+<div class="employee-container">
+  <div class="employee-card">
+    <div class="titulobello">
+      <h1>{{ listClases.nombreClase }}</h1>
     </div>
+    <img src="{{ listClases.fotoClase }}" class="card-img-top img" width="300px" height="300px"
+      style="margin-top: 40px" />
   </div>
-</div>
-
-<div class="modal fade" id="list" tabindex="-1" aria-labelledby="crear" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="crear">Alumns to Class</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">List</div>
-      <div class="modal-footer">
-        <button type=" button" class="btn btn-danger" data-bs-dismiss="modal">
-          Close
-        </button>
-      </div>
-    </div>
+  <div class="employee-card2">
+    <strong>Description</strong>
+    <p>{{ listClases.descripcion }}</p>
+    <p><b>Price: </b>{{ listClases.costo }}</p>
+    <p style="text-transform: capitalize;"><b>Instructor: </b>{{ listClases.nombreInstructor }}</p>
+    <p><b>Date: </b>{{ listClases.fecha | date}}</p>
+    <p><b>Time: </b>{{ listClases.hora }}</p>
+    <p><b>Quota: </b>{{ listClases.cupo }}</p>
   </div>
 </div>
 
 <!--Lista de Clientes Inscritos en la Clase-->
-<div style="margin-top: 5%; margin-bottom: 8%">
-  <h3 style="text-align: center">Clients Enrolled in Class</h3>
-  <br />
-  <br />
-  <!--tabla-->
-  <table class="table table-borderless" style="text-align: center">
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Name</th>
-        <th scope="col">Age</th>
-        <th scope="col">Email</th>
+
+<ng-container *ngIf="listClientes.length == 0; else tablaCl">
+  <h3 style="text-align: center">There are no clients in this class</h3>
+</ng-container>
+<ng-template #tablaCl>
+  <div style="margin-bottom: 8%">
+    <h3 style="text-align: center">Clients Enrolled in Class</h3>
+    <br />
+    <br />
+    <!--tabla-->
+    <table class="table table-borderless table-hover" style="text-align: center">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Suscription</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let customer of listClientes">
+        <td>{{customer.nombreCliente}}</td>
+        <td>{{customer.edad}}</td>
+        <td>{{customer.telefono}}</td>
+        <td>{{customer.subcripcion | currency}}</td>
       </tr>
-    </thead>
-    <tr *ngFor="let customer of listClientes">
-      <td>{{customer.id}}</td>
-      <td>{{customer.nombreCliente}}</td>
-      <td>{{customer.edad}}</td>
-      <td>{{customer.email}}</td>
-    </tr>
-  </table>
-  <br />
-</div>
+    </table>
+    <br />
+  </div>
+</ng-template>

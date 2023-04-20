@@ -2,7 +2,7 @@
 <div class="container mt-5">
   <div class="input-group mb-4">
     <!-- Barra de Busqueda -->
-    <button class="cssbuttons-io ms-5 rounded" id="botonNuevo" data-bs-toggle="modal" data-bs-target="#crear">
+    <button class="cssbuttons-io ms-5 rounded mb-4" id="botonNuevo" data-bs-toggle="modal" data-bs-target="#crear">
       <span><i class='bx bxs-plus-circle bx-tada-hover me-2'></i>
         Add Products</span>
     </button>
@@ -13,17 +13,17 @@
           Sell</span>
       </button>
     </div>
-    <button class="cssbuttons-io ms-5 rounded" id="botonNuevo" routerLink="/listaVentas">
+    <button class="cssbuttons-io ms-5 rounded" id="botonNuevo" routerLink="/listaVentas" style="height: 60px;">
       <span><i class='bx bx-show me-2'></i>
         See Sales</span>
     </button>
-    <button class="cssbuttons-io ms-5 rounded" id="botonNuevo" routerLink="/cortes">
+    <button class="cssbuttons-io ms-5 rounded" id="botonNuevo" routerLink="/cortes" style="height: 60px;">
       <span><i class='bx bx-book-bookmark me-2'></i>
         Cuts</span>
     </button>
     <!-- Se selecciona el tipo de pago -->
     <select class="form-select ms-5 rounded" aria-label="Default select example" [(ngModel)]="tipoPago"
-      [ngModelOptions]="{standalone: true}">
+      [ngModelOptions]="{standalone: true}" style="height: 60px;">
       <option selected>Payment Type</option>
       <option value="Efectivo">Cash</option>
       <option value="Paypal">Paypal or Credit Card</option>
@@ -44,7 +44,7 @@
     <!-- Lista los productos-->
     <tbody id="buscarTabla">
       <tr *ngFor="let item of productos; let i = index" class="text-capitalize">
-        <td><img src="{{item.img}}" id="imgTablita"></td>
+        <td><img src="{{item.img}}" id="imgTablita" class="img-fluid"></td>
         <td>
           <p>{{item.nombre}}</p>
         </td>

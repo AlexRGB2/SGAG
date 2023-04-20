@@ -46,7 +46,7 @@ export class VerClasesComponent implements OnInit {
 
   onDelete(id: number): void {
     Swal.fire({
-      title: '¿Are you sure',
+      title: 'Are you sure?',
       text: 'You will not be able to remove the action',
       icon: 'warning',
       showCancelButton: true,

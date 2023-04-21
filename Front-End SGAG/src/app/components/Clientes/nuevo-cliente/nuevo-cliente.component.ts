@@ -73,8 +73,18 @@ export class NuevoClienteComponent implements OnInit {
     );
   }
 
+  // onClaseChange(opcion: String) {
+  //   if (this.nombreClase.includes(opcion)) {
+  //     this.nombreClase = this.nombreClase.filter((c) => c !== opcion);
+  //   } else {
+  //     this.aux.push(opcion);
+  //     this.nombreClase = this.aux.filter((elem, index, arr) => {
+  //       return arr.indexOf(elem) === index;
+  //     });
+  //   }
+  // }
+
   onClaseChange(opcion: String) {
-    console.log(opcion);
     if (this.nombreClase.includes(opcion)) {
       this.nombreClase = this.nombreClase.filter((c) => c !== opcion);
     } else {

@@ -36,6 +36,7 @@ export class VerClienteComponent implements OnInit {
     this.clienteService.list().subscribe(
       (data) => {
         this.clientes = data;
+        console.log(data);
         $('#loading').css('display', 'none');
       },
       (err) => {

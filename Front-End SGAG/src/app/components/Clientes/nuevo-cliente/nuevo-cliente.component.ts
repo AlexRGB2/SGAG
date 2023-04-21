@@ -85,6 +85,7 @@ export class NuevoClienteComponent implements OnInit {
   // }
 
   onClaseChange(opcion: String) {
+    console.log(opcion);
     if (this.nombreClase.includes(opcion)) {
       this.nombreClase = this.nombreClase.filter((c) => c !== opcion);
     } else {

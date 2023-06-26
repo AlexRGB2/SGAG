@@ -247,9 +247,9 @@ Docente: Gabriel Barrón Rodríguez
 Grupo: GDS0452
 
 ## Contacto.
-Correo electrónico: rojassanchezo63@gmail.com
+Correo electrónico: alexismtz200326@gmail.com
 
-Teléfono: 4181121719
+Teléfono: 418571479
 
 ## Participantes.
 * [Garay Montes Víctor Andrés](https://github.com/victorsigma)
